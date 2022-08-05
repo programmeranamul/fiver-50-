@@ -1,8 +1,8 @@
 import "../styles/globals.css";
-import Header from './../components/common/Header';
 import Search from './../components/common/Search';
 import Footer from './../components/common/Footer';
 import {useEffect} from "react"
+import Header from './../components/common/Header/Header';
 
 function MyApp({ Component, pageProps }) {
   useEffect(() => {

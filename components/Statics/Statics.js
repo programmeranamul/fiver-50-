@@ -5,7 +5,7 @@ import SingleLineChart from "./SingleLineChart";
 const Statics = () => {
   return (
     <section className="container">
-      <div className={`color-deep-gray-1 whait-bg ${style.wrapper}`}>
+      <div className={`color-deep-gray-1 white-bg  ${style.wrapper}`}>
         <article className={style.left_site}>
           <div className={style.content_sec}>
             <StaticsContent
