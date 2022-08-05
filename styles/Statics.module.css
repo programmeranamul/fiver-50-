@@ -108,25 +108,25 @@
 .chart_section {
   display: flex;
   box-sizing: border-box;
-  max-width: 50%;
+  /* max-width: 50%; */
   min-width: 0px;
   min-height: 0px;
   flex-flow: row wrap;
-  -webkit-box-pack: justify;
   justify-content: space-between;
-  padding-top: 24px;
+  flex-basis: 50%;
   padding-left: 24px;
 }
 .cart_wrapper {
   display: flex;
   width: 100%;
+  gap: 24px;
 }
 .my_chart {
-  height: 194px;
+  /* height: 194px; */
   width: 50%;
 }
 
-@media (max-width: 855px) {
+@media (max-width: 991.98px) {
   .wrapper {
     flex-direction: column;
   }
@@ -157,5 +157,15 @@
     padding-right: 6px;
     /* width: 12px; */
     width: 30px;
+  }
+  .cart_wrapper {
+    flex-direction: column;
+  }
+  .my_chart {
+    width: 90%;
+  }
+  .chart_section{
+
+    padding-bottom: 20px;
   }
 }
