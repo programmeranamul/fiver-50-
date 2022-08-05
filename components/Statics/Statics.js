@@ -40,7 +40,10 @@ const Statics = () => {
           </div>
         </article>
         <article className={style.chart_section}>
-          <SingleLineChart />
+          <div className={style.cart_wrapper}>
+          <SingleLineChart mydata={[65, 59, 80, 81, 56, 55, 40]}/>
+          <SingleLineChart mydata={[65, 59, 80, 81, 56, 55, 40]}/>
+          </div>
         </article>
       </div>
     </section>

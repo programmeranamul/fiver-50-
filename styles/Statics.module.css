@@ -117,6 +117,14 @@
   padding-top: 24px;
   padding-left: 24px;
 }
+.cart_wrapper {
+  display: flex;
+  width: 100%;
+}
+.my_chart {
+  height: 194px;
+  width: 50%;
+}
 
 @media (max-width: 855px) {
   .wrapper {
