@@ -1,60 +1,10 @@
 import React from "react";
 import BlockDataTable from "./BlockDataTable";
 import style from "../../styles/Home.module.css";
-
-const tableRow = [
-  {
-    text: "Shard",
-  },
-  {
-    text: "Height",
-  },
-  {
-    text: "Transactions",
-  },
-  {
-    text: "Timestamp",
-  },
-];
-
-const tableData = [
-  {
-    shard: 0,
-    height: 29643386,
-    transactions: 12,
-    imestamp: "08/05/2022, 03:34:42",
-  },
-  {
-    shard: 0,
-    height: 29643386,
-    transactions: 12,
-    imestamp: "08/05/2022, 03:34:42",
-  },
-  {
-    shard: 0,
-    height: 29643386,
-    transactions: 12,
-    imestamp: "08/05/2022, 03:34:42",
-  },
-  {
-    shard: 0,
-    height: 29643386,
-    transactions: 12,
-    imestamp: "08/05/2022, 03:34:42",
-  },
-  {
-    shard: 0,
-    height: 29643386,
-    transactions: 12,
-    imestamp: "08/05/2022, 03:34:42",
-  },
-  {
-    shard: 0,
-    height: 29643386,
-    transactions: 12,
-    imestamp: "08/05/2022, 03:34:42",
-  },
-];
+import {
+  latestedBlockTableRow,
+  latestedBlockTableData,
+} from "./../../data/latestedBlockData";
 
 function LatestBlocks() {
   return (
@@ -65,7 +15,10 @@ function LatestBlocks() {
         >
           <h3>Latest Transactions</h3>
           <div>
-            <select className={`form-select ${style.my_select}`} aria-label="Default select example">
+            <select
+              className={`form-select ${style.my_select}`}
+              aria-label="Default select example"
+            >
               <option value="Shard 0">Shard 0</option>
               <option value="Shard 0">Shard 0</option>
               <option value="Shard 0">Shard 0</option>
@@ -73,7 +26,10 @@ function LatestBlocks() {
           </div>
         </div>
 
-        <BlockDataTable tableRow={tableRow} tableData={tableData} />
+        <BlockDataTable
+          tableRow={latestedBlockTableRow}
+          tableData={latestedBlockTableData}
+        />
       </div>
     </section>
   );

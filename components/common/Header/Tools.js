@@ -1,6 +1,6 @@
 import { Icon } from "@iconify/react";
 import style from "../../../styles/Header.module.css";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import MyDropDown from "./../MyDropDown";
 import Link from "next/link";
 

@@ -32,7 +32,7 @@ function Token() {
           Tokens <Icon icon="fe:drop-down" className={style.icon} />
         </span>
       </button>
-      <MyDropDown open={open}>
+      <MyDropDown open={open} setOpen={setOpen}>
         <div className={style.dp_link_wrapper}>
           {links.map((link, index) => (
             <Link key={index} href={link.link}>

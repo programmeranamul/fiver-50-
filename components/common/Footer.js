@@ -1,9 +1,6 @@
 import { Icon } from "@iconify/react";
 import style from "../../styles/Footer.module.css";
 
-{
-  /* <Icon icon="fa:group"  className={style.icon}/> */
-}
 const links = [
   {
     link: "https://www.fiverr.com/share/pBKL7E",

@@ -10,20 +10,16 @@ function Setting() {
     setOpen(!open);
   };
 
-  
-
   const [choosedTheme, setChoosedTheme] = useState("Light");
   const [timeFormet, setTimeFormet] = useState("Exact");
 
-  console.log(choosedTheme);
-
   useEffect(() => {
-    if(choosedTheme !== "Light"){
-        document.body.className="dark-theme"
-        return
+    if (choosedTheme !== "Light") {
+      document.body.className = "dark-theme";
+      return;
     }
-    document.body.className="light-theme"
-  }, [choosedTheme])
+    document.body.className = "light-theme";
+  }, [choosedTheme]);
 
   return (
     <div className="position-relative">
@@ -33,6 +29,7 @@ function Setting() {
         </span>
       </button>
       <MyDropDown open={open}>
+        {/* swith theme */}
         <div className="mb-3">
           <h4 className={style.title}>Theme</h4>
           <div className={style.switcher}>
@@ -54,6 +51,8 @@ function Setting() {
             </div>
           </div>
         </div>
+
+        {/* swith time fromet */}
         <div className="mb-3">
           <h4 className={style.title}>Date Format</h4>
           <div className={style.switcher}>

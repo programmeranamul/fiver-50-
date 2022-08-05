@@ -4,7 +4,7 @@
   gap: 30px;
 }
 
-.my_select:focus{
+.my_select:focus {
   border: 1px solid #ced4da;
   box-shadow: none;
 }
@@ -18,7 +18,7 @@
     flex-basis: 50%;
   }
 
-  .blocks_table{
+  .blocks_table {
     flex-basis: 50%;
   }
 }
