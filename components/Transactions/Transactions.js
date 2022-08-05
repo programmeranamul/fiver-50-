@@ -1,27 +1,22 @@
-import style from "../../styles/Transactions.module.css";
+import style from "../../styles/Home.module.css";
 import DataTable from "./../common/DataTable";
 
 // const tableRow = ["Shard", "Hash", "From", "To", "Timestamp"];
 const tableRow = [
   {
     text: "Shard",
-    color: true,
   },
   {
     text: "Hash",
-    color: true,
   },
   {
     text: "From",
-    color: false,
   },
   {
     text: "To",
-    color: false,
   },
   {
     text: "Timestamp",
-    color: true,
   },
 ];
 
@@ -81,7 +76,7 @@ const tableData = [
 
 function Transactions() {
   return (
-    <section className="container">
+    <section className={style.trasactions_table  }>
       <div className={`section-wrapper`}>
         <div className={`section-title-1 white-bg`}>
           <h3>Latest Transactions</h3>

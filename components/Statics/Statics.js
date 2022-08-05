@@ -1,8 +1,6 @@
 import style from "../../styles/Statics.module.css";
 import StaticsContent from "./StaticsContent";
-import { Pie, defaults } from "react-chartjs-2";
 import SingleLineChart from "./SingleLineChart";
-
 
 const Statics = () => {
   return (
@@ -14,6 +12,7 @@ const Statics = () => {
               mainText="ONE PRICE"
               subText="$ 0.0222"
               des=" (-2.713%)"
+              icon="fa:group"
             />
             <div className={style.line}></div>
             <div className={style.line_1}></div>
@@ -21,6 +20,7 @@ const Statics = () => {
             <StaticsContent
               mainText="TRANSACTION VOLUME"
               subText="754,125,091"
+              icon="fa:group"
             />
           </div>
           <div className={style.content_sec}>
@@ -28,6 +28,7 @@ const Statics = () => {
               mainText="ONE PRICE"
               subText="$ 0.0222"
               des=" (-2.713%)"
+              icon="fa:group"
             />
             <div className={style.line}></div>
             <div className={style.line_1}></div>
@@ -35,6 +36,7 @@ const Statics = () => {
             <StaticsContent
               mainText="TRANSACTION VOLUME"
               subText="754,125,091"
+              icon="fa:group"
             />
           </div>
         </article>

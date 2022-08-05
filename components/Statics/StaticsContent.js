@@ -1,13 +1,14 @@
 import style from "../../styles/Statics.module.css";
+import { Icon } from "@iconify/react";
 
-const StaticsContent = ({ mainText, subText, des }) => {
+const StaticsContent = ({ mainText, subText, des, icon }) => {
   return (
     <div className={style.content}>
-      <div className={style.icon}>Icon</div>
+      <div className={style.icon}><Icon icon={icon} className="blue-color"/></div>
       <div className={style.text}>
         <span className={style.main_text}>{mainText}</span>
         <p className={style.sub_text}>
-          <span>{subText} </span>
+          <span className="color-deep-gray-1">{subText} </span>
           {des && <span className={style.descrise}> {des}</span>}
         </p>
       </div>

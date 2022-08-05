@@ -2,10 +2,15 @@ import style from "../../styles/Header.module.css";
 import logo from "../../public/header/logo.svg";
 import Link from "next/link";
 import { Icon } from "@iconify/react";
+import {useState} from "react"
 
 import Image from "next/image";
 
+
+
 function Header() {
+  const [active, setActive] = useState("ONE")
+
   return (
     <header className={style.header}>
       <div className="container">
@@ -24,12 +29,12 @@ function Header() {
             <div className={`d-flex align-items-center`}>
               <p className={`d-none d-md-block ${style.address_text}`}>Address Format</p>
               <div className={style.address_type}>
-                <div className={style.active_int}></div>
-                <div className={style.one}>
-                  <p className="mb-0">ONE</p>
+                <div className={`${active === "ONE" ?style.active_one :style.active_eth } ${style.active_int}`}></div>
+                <div className={style.one} onClick={() => setActive("ONE")}>
+                  <p className={`mb-0 ${active === "ONE" ? "blue-color" : "white-color"}`} >ONE</p>
                 </div>
-                <div className={style.eth}>
-                  <p className="mb-0">ETH</p>
+                <div className={style.eth} onClick={() => setActive("ETH")}>
+                  <p className={`mb-0 ${active !== "ONE" ? "blue-color" : "white-color"}`}>ETH</p>
                 </div>
               </div>
             </div>

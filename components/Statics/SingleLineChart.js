@@ -134,9 +134,23 @@ const SingleLineChart = () => {
             },
           ],
         }}
+        
+
+        options={{
+            scales: {
+              y:{
+                beginAtZero:true,
+                grid:{
+                    display:"none"
+                }
+              }
+            }
+        }}
+          
       />
     </div>
   );
 };
 
-export default SingleLineChart;
+export default SingleLineChart;   
+

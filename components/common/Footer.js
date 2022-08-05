@@ -29,7 +29,7 @@ const links = [
 
 function Footer() {
   return (
-    <footer className={`white-bg pt-4 pb-5`}>
+    <footer className={`white-bg pt-4 pb-5 ${style.footer}`}>
       <div className="container">
         <div className={style.link_wrpper}>
           {links.map((el) => (

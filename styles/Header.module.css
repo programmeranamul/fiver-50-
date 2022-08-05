@@ -55,14 +55,19 @@
     border-radius: 8px;
     pointer-events: none;
     background-color: rgb(243, 243, 243);
-    transform: translateX(0%);
+   
     transition: transform 150ms ease-in-out 0s;
   }
-  
+  .active_one{
+    transform: translateX(0%);
+  }
+  .active_eth{
+    transform: translateX(100%);
+  }
   .one {
     padding: 4px 10px;
     min-width: 20px;
-    color: rgb(0, 174, 233);
+    /* color: rgb(0, 174, 233); */
     font-weight: 700;
     user-select: none;
     outline: none;
@@ -77,7 +82,7 @@
   .eth {
     padding: 4px 10px;
     min-width: 20px;
-    color: rgb(231, 236, 247);
+    /* color: rgb(231, 236, 247); */
     font-weight: 700;
     user-select: none;
     outline: none;
