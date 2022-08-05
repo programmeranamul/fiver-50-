@@ -1,10 +1,12 @@
+
+import "chartjs-adapter-moment";
 import {
   Chart as ChartJS,
   CategoryScale,
   LinearScale,
   PointElement,
   LineElement,
-  Title,
+  Title,TimeScale,
   Tooltip,
   Legend,
 } from "chart.js";
@@ -13,23 +15,22 @@ ChartJS.register(
   CategoryScale,
   LinearScale,
   PointElement,
-  LineElement,
+  LineElement,TimeScale,
   Title,
   Tooltip,
   Legend
 );
 import style from "../../styles/Statics.module.css";
 
-const labels = ["January", "February", "March"];
+
 
 function SingleLineChart({ mydata, title }) {
   const data = {
-    labels,
     datasets: [
       {
         data: mydata,
         tension: 0.4,
-        pointRadius: 0,
+        // pointRadius: 0,
       },
     ],
   };
@@ -47,6 +48,11 @@ function SingleLineChart({ mydata, title }) {
     },
     scales: {
       x: {
+        type: "time",
+        ticks: { maxTicksLimit: 3 },
+        time: {
+          unit: "day",
+        },
         grid: {
           display: false,
           borderWidth: 0,
