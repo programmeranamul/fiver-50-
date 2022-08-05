@@ -7,6 +7,7 @@
   --deep-gray: rgb(117, 135, 150);
   --deep-gray-1: rgb(85, 98, 109);
   --white: #fff;
+  --red-2: rgb(210, 53, 64);
 }
 
 .blue-color {
@@ -26,6 +27,9 @@
 }
 .color-deep-gray-1 {
   color: var(--deep-gray-1);
+}
+.color-red-2{
+  color: var(--red-2);
 }
 
 .section-wrapper {

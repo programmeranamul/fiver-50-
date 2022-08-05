@@ -64,10 +64,9 @@
   .active_eth{
     transform: translateX(100%);
   }
-  .one {
+  .one,.eth {
     padding: 4px 10px;
     min-width: 20px;
-    /* color: rgb(0, 174, 233); */
     font-weight: 700;
     user-select: none;
     outline: none;
@@ -77,23 +76,8 @@
     transition: color 100ms ease-in-out 0s;
     font-size: 14px;
     line-height: 20px;
-  }
-  
-  .eth {
-    padding: 4px 10px;
-    min-width: 20px;
-    /* color: rgb(231, 236, 247); */
-    font-weight: 700;
-    user-select: none;
-    outline: none;
-    text-align: center;
-    cursor: pointer;
-    z-index: 1;
-    transition: color 100ms ease-in-out 0s;
-    font-size: 14px;
-    line-height: 20px;
-  }
-  
+  } 
+ 
   .my_btn {
     border: none;
     box-shadow: none;
@@ -111,8 +95,9 @@
   .btn_text {
     font-size: 14px;
     line-height: 20px;
-    color: rgb(255, 255, 255);
     font-weight: bold;
+    display: flex;
+    gap:5px
   }
   
   .icon {
@@ -120,3 +105,18 @@
     height: 20px;
   }
   
+
+  @media (max-width: 575.98px) {
+    .my_btn {     
+      padding: 4px 6px 4px 8px;
+     
+    }
+    .btn_text {      
+      gap:0px
+    }
+    .one,.eth {
+      padding: 4px 6px;
+      font-size: 12px;
+      line-height: 20px;
+    } 
+  }

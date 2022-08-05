@@ -9,7 +9,7 @@ const StaticsContent = ({ mainText, subText, des, icon }) => {
         <span className={style.main_text}>{mainText}</span>
         <p className={style.sub_text}>
           <span className="color-deep-gray-1">{subText} </span>
-          {des && <span className={style.descrise}> {des}</span>}
+          {des && <span className={`color-red-2 ${style.descrise}`}> {des}</span>}
         </p>
       </div>
     </div>
