@@ -1,0 +1,117 @@
+.header {
+    display: flex;
+    box-sizing: border-box;
+    max-width: 100%;
+    background-color: rgb(0, 174, 233);
+    color: rgb(85, 98, 109);
+    min-width: 0px;
+    min-height: 0px;
+    flex-direction: row;
+    -webkit-box-pack: center;
+    justify-content: center;
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+  
+  .logo_text {
+    color: rgb(255, 255, 255);
+    font-size: 1.2em;
+    line-height: 0.7em;
+    font-weight: 700;
+    display: flex;
+    flex-direction: column;
+    padding-left: 7px;
+    padding-top: 7px;
+  }
+  .logo_text_sm {
+    font-size: 14px;
+    line-height: 20px;
+  }
+  
+  .logo-area {
+  }
+  
+  .right_area {
+  }
+  
+  .address_type {
+    position: relative;
+    box-shadow: rgb(243 243 243) 0px 0px 0px 1px inset;
+    border-radius: 8px;
+    display: flex;
+  }
+  .address_text {
+    font-size: 14px;
+    line-height: 20px;
+    color: rgb(255, 255, 255);
+    margin-bottom: 0;
+    margin-right: 16px;
+  }
+  .active_int {
+    position: absolute;
+    overflow: hidden;
+    width: 50%;
+    height: 100%;
+    border-radius: 8px;
+    pointer-events: none;
+    background-color: rgb(243, 243, 243);
+    transform: translateX(0%);
+    transition: transform 150ms ease-in-out 0s;
+  }
+  
+  .one {
+    padding: 4px 10px;
+    min-width: 20px;
+    color: rgb(0, 174, 233);
+    font-weight: 700;
+    user-select: none;
+    outline: none;
+    text-align: center;
+    cursor: auto;
+    z-index: 1;
+    transition: color 100ms ease-in-out 0s;
+    font-size: 14px;
+    line-height: 20px;
+  }
+  
+  .eth {
+    padding: 4px 10px;
+    min-width: 20px;
+    color: rgb(231, 236, 247);
+    font-weight: 700;
+    user-select: none;
+    outline: none;
+    text-align: center;
+    cursor: pointer;
+    z-index: 1;
+    transition: color 100ms ease-in-out 0s;
+    font-size: 14px;
+    line-height: 20px;
+  }
+  
+  .my_btn {
+    border: none;
+    box-shadow: none;
+    display: inline-block;
+    background: transparent;
+    overflow: visible;
+    padding: 4px 6px 4px 22px;
+    transition-property: color, background-color, border-color, box-shadow;
+    transition-duration: 0.1s;
+    transition-timing-function: ease-in-out;
+  }
+  .my_btn:last-child {
+    padding-left: 0px;
+  }
+  .btn_text {
+    font-size: 14px;
+    line-height: 20px;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+  }
+  
+  .icon {
+    width: 20px;
+    height: 20px;
+  }
+  
