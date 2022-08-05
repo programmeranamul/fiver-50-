@@ -2,6 +2,8 @@ import style from "../../../styles/Header.module.css";
 import { Icon } from "@iconify/react";
 import { useState } from "react";
 import Setting from './Setting';
+import Tools from './Tools';
+import Token from './Token';
 
 function NavMenu() {
     const [active, setActive] = useState("ONE");
@@ -38,16 +40,8 @@ function NavMenu() {
       </div>
     </div>
     <div className="d-flex">
-      <button className={style.my_btn}>
-        <span className={`white-color ${style.btn_text}`}>
-          Tokens <Icon icon="fe:drop-down" className={style.icon} />
-        </span>
-      </button>
-      <button className={style.my_btn} >
-        <span className={`white-color ${style.btn_text}`}>
-          Tools <Icon icon="fe:drop-down" className={style.icon} />
-        </span>
-      </button>
+      <Token />
+      <Tools />
       <Setting />
     </div>
   </div>

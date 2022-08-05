@@ -1,7 +1,7 @@
 import { Icon } from "@iconify/react";
 import style from "../../../styles/Setting.module.css";
 import MyDropDown from "./../MyDropDown";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 function Setting() {
   const [open, setOpen] = useState(false);
@@ -10,8 +10,20 @@ function Setting() {
     setOpen(!open);
   };
 
+  
+
   const [choosedTheme, setChoosedTheme] = useState("Light");
   const [timeFormet, setTimeFormet] = useState("Exact");
+
+  console.log(choosedTheme);
+
+  useEffect(() => {
+    if(choosedTheme !== "Light"){
+        document.body.className="dark-theme"
+        return
+    }
+    document.body.className="light-theme"
+  }, [choosedTheme])
 
   return (
     <div className="position-relative">

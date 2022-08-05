@@ -105,8 +105,23 @@
     width: 20px;
     height: 20px;
   }
-  
-
+  .dp_link_wrapper{
+    width: 160px;
+  }
+.dp_link{
+  box-sizing: border-box;
+  font-size: inherit;
+  line-height: inherit;
+  color: rgb(0, 174, 233);
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  display: block;
+  text-decoration: underline !important;
+}
+.dp_link:hover{
+  color: rgb(0, 174, 233);
+}
   @media (max-width: 575.98px) {
     .my_btn {     
       padding: 4px 6px 4px 8px;

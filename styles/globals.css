@@ -9,6 +9,15 @@
   --white: #fff;
   --red-2: rgb(210, 53, 64);
 }
+.dark-theme {
+  --main-bg: rgb(0, 174, 233);
+  --blue: rgb(0, 174, 233);
+  --light-gray: #030921;
+  --deep-gray: rgb(117, 135, 150);
+  --deep-gray-1: rgb(85, 98, 109);
+  --white: #030921;
+  --red-2: rgb(210, 53, 64);
+}
 
 .blue-color {
   color: var(--blue);
