@@ -1,7 +1,6 @@
-import ViewAllBtn from './ViewAllBtn';
+import ViewAllBtn from "./ViewAllBtn";
 
 function DataTable({ tableRow, tableData }) {
-
   return (
     <>
       <div className="data-table">
@@ -26,7 +25,9 @@ function DataTable({ tableRow, tableData }) {
           </tbody>
         </table>
       </div>
-      <ViewAllBtn text="VIEW ALL TRANSACTIONS" link="/" />
+      <div className="p-4">
+        <ViewAllBtn text="VIEW ALL TRANSACTIONS" link="/" />
+      </div>
     </>
   );
 }

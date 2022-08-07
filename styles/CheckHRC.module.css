@@ -1,0 +1,60 @@
+.form_wrapper {
+  padding: 28px;
+  border-radius: 8px;
+}
+
+.input_flex {
+  display: flex;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.contract_addess {
+  max-width: 550px;
+  width: 100%;
+  margin-right: 16px;
+}
+
+.my_input {
+  background-color: transparent !important;
+}
+.relative_event {
+  margin-bottom: 30px;
+}
+.require_list_wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.single_required {
+  border-radius: 2px;
+  padding: 5px;
+
+  text-align: center;
+  cursor: pointer;
+
+  font-weight: normal;
+  text-decoration: line-through;
+  font-size: 15px;
+}
+.s_r_l {
+  color: rgb(117, 135, 150);
+  background: rgb(243, 243, 243);
+}
+
+.s_r_d {
+  color: rgb(95, 152, 199);
+  background: rgb(3, 9, 33);
+}
+
+.select {
+  width: 245px;
+}
+
+@media (max-width: 575.98px) {
+  .select {
+    width: 190px;
+  }
+}

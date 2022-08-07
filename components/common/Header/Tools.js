@@ -14,11 +14,11 @@ function Tools() {
   const links = [
     {
       text: "Token Approvals",
-      link: "/",
+      link: "/tools/approvals",
     },
     {
       text: "Check HRC",
-      link: "/",
+      link: "/tools/checkHrc",
     },
   ];
 

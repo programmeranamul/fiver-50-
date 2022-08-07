@@ -8,6 +8,36 @@
   --deep-gray-1: rgb(85, 98, 109);
   --white: #fff;
   --red-2: rgb(210, 53, 64);
+  --red-1: red;
+  --dark-white-color: rgb(85, 98, 109);
+  --white-blue-bg: rgb(255, 255, 255);
+  --lightGray-white:rgb(243, 243, 243);
+  --lightGray-popin:rgb(117, 135, 150);
+
+  /* color */
+  --gray-light-blue: rgb(117, 135, 150);
+  --my-btn-color: rgb(0, 174, 233);
+
+
+  /* background-color */
+
+
+
+  /* footer */
+  --footer-bg: #fff;
+  --footer-color: rgb(117, 135, 150);
+
+  /* border */
+  --lightgray-to-light-blue: rgb(231, 236, 247);
+  --my-btn-border: rgb(0, 174, 233);
+
+  /* Form input */
+  --input-color-1: rgb(85, 98, 109);
+  --input-select-bg-1: #fff;
+  --input-placeholder-color-1:rgb(216, 213, 213);
+
+  /* view button */
+  --view-btn-bg: #fff;
 }
 .dark-theme {
   --main-bg: rgb(0, 174, 233);
@@ -17,14 +47,55 @@
   --deep-gray-1: rgb(85, 98, 109);
   --white: #030921;
   --red-2: rgb(210, 53, 64);
+
+  --white-blue-bg: rgb(27, 41, 94);
+  --dark-white-color: rgb(255, 255, 255);
+  --lightGray-white:#000;
+  --lightGray-popin:rgb(95, 152, 199);
+
+  /* color */
+  --gray-light-blue: rgb(95, 152, 199);
+  --red-1: red;
+  --my-btn-color: rgb(105, 250, 189);
+
+
+
+
+  /* footer */
+  --footer-bg: rgb(27, 41, 94);
+  --footer-color: rgb(95, 152, 199);
+
+  /* border */
+  --lightgray-to-light-blue: rgb(55, 88, 115);
+  --my-btn-border: rgb(105, 250, 189);
+
+  /* Form input */
+  --input-color-1: #fff;
+  --input-select-bg-1: #000;
+  --input-placeholder-color-1:#5a5a5a;
+
+  /* view button */
+  --view-btn-bg: transparent;
 }
+
+/* border */
+.lightgray-to-light-blue {
+  border-color: var(--lightgray-to-light-blue) !important;
+}
+
 
 /* utils class for change theme */
 .blue-color {
   color: var(--blue);
 }
+.gray-light-blue {
+  color: var(--gray-light-blue);
+}
 .blue-bg {
   background-color: var(--blue);
+}
+.white-blue-bg {
+  background-color: var(--white-blue-bg);
 }
 .gray-bg {
   background-color: var(--light-gray);
@@ -43,6 +114,34 @@
 }
 .color-red-2 {
   color: var(--red-2);
+}
+.color-red-1 {
+  color: var(--red-1);
+}
+
+.dark-white-color {
+  color: var(--dark-white-color);
+}
+.lightGray-popin-color{
+  color: var(--lightGray-popin);
+}
+
+
+/* background class */
+.lightGray-white-bg{
+  background-color: var(--lightGray-white);
+}
+
+
+
+/* fonr-size */
+.fs-14 {
+  font-size: 14px;
+}
+
+/* font-weight */
+.fw-700{
+  font-weight: 700 !important;
 }
 
 /* reset and default styling */
@@ -103,18 +202,18 @@ tbody tr td:last-child {
 
 /* button styling */
 .my-btn {
-  border: 1px solid var(--blue);
+  border: 1px solid var(--my-btn-border);
   padding: 8px 5px;
   border-radius: 4px;
   font-weight: bold;
   text-align: center;
   font-size: 12px;
-  color: var(--blue);
+  color: var(--my-btn-color);
   transition: all 0.3s ease 0s;
 }
 .my-btn:hover {
   letter-spacing: 0.3px;
-  color: var(--blue);
+  color: var(--my-btn-color);
 }
 
 /* section common styling */
@@ -138,9 +237,62 @@ tbody tr td:last-child {
   position: relative;
 }
 
+/* title */
+.title-1 {
+  margin-top: 0px;
+  margin-bottom: 24px;
+  font-size: 34px;
+  line-height: 40px;
+  font-weight: 600;
+}
+
+/* input */
+.my-input {
+  background-color: transparent !important;
+  border: 1px solid var(--lightgray-to-light-blue);
+  color: var(--input-color-1) !important ;
+  padding: 11px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 4px;
+}
+.my-input::placeholder {
+  color: var(--input-placeholder-color-1) !important;
+  
+}
+.my-input:focus {
+  outline: none !important;
+  box-shadow: none !important;
+  border: 1px solid var(--lightgray-to-light-blue);
+}
+.my-input-label {
+  font-size: 18px;
+  line-height: 24px;
+  color: var(--input-color-1) !important ;
+  margin-bottom: 0;
+}
+.my-select option {
+  background-color: var(--input-select-bg-1) !important;
+  padding-top: 5px;
+  padding-bottom: 15px ;
+}
+
+/* footer class */
+.footer-bg {
+  background-color: var(--footer-bg);
+}
+.footer-color {
+  color: var(--footer-color);
+}
+
 /* media query */
 @media (max-width: 767.98px) {
   .data-table {
     overflow-x: scroll;
+  }
+  .title-1 {
+    font-size: 26px;
+    line-height: 32px;
+    margin-bottom: 12px;
   }
 }

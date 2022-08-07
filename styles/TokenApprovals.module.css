@@ -1,0 +1,15 @@
+.description_box {
+  border-radius: 8px;
+  padding: 12px 12px 12px 22px;
+  border: 1px solid;
+}
+
+.note {
+  margin: 24px;
+}
+
+.meta_mask {
+  width: 200px;
+  padding-top: 24px;
+  padding-bottom: 24px;
+}

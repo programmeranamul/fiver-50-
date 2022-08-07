@@ -27,7 +27,9 @@ function BlockDataTable({ tableRow, tableData }) {
         </tbody>
       </table>
     </div>
-   <ViewAllBtn text="VIEW ALL TRANSACTIONS" link="/"/>
+ <div className="p-4">
+ <ViewAllBtn text="VIEW ALL TRANSACTIONS" link="/"/>
+ </div>
     </>
   );
 }
