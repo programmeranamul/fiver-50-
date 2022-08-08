@@ -1,8 +1,8 @@
-import React from "react";
 import { useTheme } from "../../lib/ThemeContext";
 import { Icon } from "@iconify/react";
 import style from "../../styles/HrcDataTable.module.css";
 import { Hrc721DataTableRow } from "./../../data/Hrc721DataTableData";
+import Link from "next/link";
 
 function Hrc721DataTable({ data }) {
   const { theme, setTheme, my } = useTheme();
@@ -45,8 +45,7 @@ function Hrc721DataTable({ data }) {
                   style.td
                 }`}
               >
-                <a
-                  hrfe="/"
+                <div
                   className={`${
                     theme === "Light" ? style.address_l : style.address_d
                   } ${style.address}`}
@@ -54,8 +53,16 @@ function Hrc721DataTable({ data }) {
                   <span>
                     <Icon icon="ic:outline-copy-all" />
                   </span>
-                  <span>{el.address}</span>
-                </a>
+                  <Link href={el.address}>
+                    <a
+                      className={
+                        theme === "Light" ? style.address_l : style.address_d
+                      }
+                    >
+                      {el.address}
+                    </a>
+                  </Link>
+                </div>
               </td>
 
               <td

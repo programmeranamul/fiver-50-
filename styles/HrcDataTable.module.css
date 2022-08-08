@@ -66,3 +66,12 @@
   gap: 5px;
   align-items: center;
 }
+
+.my_img {
+  border-radius: 8px;
+}
+.name_with_img {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}

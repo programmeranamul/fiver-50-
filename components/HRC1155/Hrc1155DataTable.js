@@ -1,17 +1,18 @@
-import style from "../../styles/HrcDataTable.module.css";
-import { HrcDataTableRowData } from "./../../data/HrcDataTableData";
 import { Icon } from "@iconify/react";
 import { useTheme } from "../../lib/ThemeContext";
+import style from "../../styles/HrcDataTable.module.css";
+import { Hrc1155DataRow } from "./../../data/Hrc1155DataTableData";
+import Image from "next/image";
 import Link from "next/link";
 
-function HrcDataTable({ data }) {
+function Hrc1155DataTable({ data }) {
   const { theme, setTheme, my } = useTheme();
   return (
     <div className={style.wrapper}>
       <table className={style.table}>
         <thead className={style.thead}>
           <tr className={style.thead_tr}>
-            {HrcDataTableRowData.map((data) => (
+            {Hrc1155DataRow.map((data) => (
               <th
                 key={data}
                 className={`${theme === "Light" ? style.th_l : style.th_d} ${
@@ -31,7 +32,16 @@ function HrcDataTable({ data }) {
                   style.td
                 }`}
               >
-                {el.name}
+                <div className={style.name_with_img}>
+                  <Image
+                    className={style.my_img}
+                    src={el.imgSrc}
+                    alt={el.name}
+                    width="30"
+                    height="30"
+                  />
+                  <span> {el.name}</span>
+                </div>
               </td>
               <td
                 className={`${theme === "Light" ? style.td_l : style.td_d} ${
@@ -53,49 +63,26 @@ function HrcDataTable({ data }) {
                   <span>
                     <Icon icon="ic:outline-copy-all" />
                   </span>
-                  <Link
-                    href={el.address}                   
-                  >
-                    <a  className={
-                      theme === "Light" ? style.address_l : style.address_d
-                    }>{el.address}</a>
-                  </Link>
-                </div>
-              </td>
-              <td
-                className={`${theme === "Light" ? style.td_l : style.td_d} ${
-                  style.td
-                }`}
-              >
-                <div className={style.icon_text}>
                   <span>
-                    <b>{el.circulatingSupply}</b>
-                  </span>
-                  <span className="d-flex">
-                    <Icon icon="ant-design:question-circle-outlined" />
+                    <Link href={el.address.link}>
+                      <a
+                        className={
+                          theme === "Light" ? style.address_l : style.address_d
+                        }
+                      >
+                        {el.address.text}
+                      </a>
+                    </Link>
                   </span>
                 </div>
               </td>
+
               <td
                 className={`${theme === "Light" ? style.td_l : style.td_d} ${
                   style.td
                 }`}
               >
-                <div className={style.icon_text}>
-                  <span>
-                    <b>{el.totalSupply}</b>
-                  </span>
-                  <span className="d-flex">
-                    <Icon icon="ant-design:question-circle-outlined" />
-                  </span>
-                </div>
-              </td>
-              <td
-                className={`${theme === "Light" ? style.td_l : style.td_d} ${
-                  style.td
-                }`}
-              >
-                <div className={style.icon_text}>
+                <div className={`justify-content-end ${style.icon_text}`}>
                   <span>{el.holders}</span>
                   <span className="d-flex">
                     <Icon icon="ant-design:question-circle-outlined" />
@@ -110,4 +97,4 @@ function HrcDataTable({ data }) {
   );
 }
 
-export default HrcDataTable;
+export default Hrc1155DataTable;
