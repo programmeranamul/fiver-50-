@@ -1,6 +1,5 @@
 import { useTheme } from "../../../lib/ThemeContext";
 import style from "../../../styles/TableFooter.module.css";
-import TableHeader from "./TableHeader";
 import TablePagination from "./TablePagination";
 
 function TableFooter() {
