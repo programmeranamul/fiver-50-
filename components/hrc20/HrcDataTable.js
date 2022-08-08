@@ -5,6 +5,8 @@ import { useTheme } from "../../lib/ThemeContext";
 
 function HrcDataTable({ data }) {
   const { theme, setTheme, my } = useTheme();
+  console.log(data)
+  console.log(Object.keys(data))
   return (
     <div className={style.wrapper}>
       <table className={style.table}>
@@ -61,6 +63,8 @@ function HrcDataTable({ data }) {
             </tr>
           ))}
         </tbody>
+
+
       </table>
     </div>
   );
