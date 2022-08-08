@@ -6,7 +6,7 @@ import style from "../styles/Home.module.css";
 function Index() {
   return (
     <>
-      <Statics />
+      {/* <Statics /> */}
       <div className="container">
         <div className={style.table_wrapper}>
         <LatestBlocks />

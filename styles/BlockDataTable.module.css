@@ -1,0 +1,30 @@
+.td_l {
+  border-bottom: 1px solid rgb(231, 236, 247);
+}
+.td_d {
+  border-bottom: 1px solid rgb(55, 88, 115);
+}
+
+.sh_l {
+  color: rgb(0, 174, 233);
+}
+
+.sh_d {
+  color: rgb(105, 250, 189);
+}
+
+.tr_l {
+  color: rgb(85, 98, 109);
+}
+
+.tr_d {
+  color: #fff;
+}
+
+.tm_d {
+  color: rgb(95, 152, 199);
+}
+
+.tm_l {
+  color: rgb(117, 135, 150);
+}

@@ -12,14 +12,22 @@ function LatestBlocks() {
   const lightTheme = theme === "Light";
   return (
     <section className={style.blocks_table}>
-      <div className={`${style.section_wrapper} ${lightTheme? style.s_w_l : style.s_w_d}`}>
+      <div
+        className={`${style.section_wrapper} ${
+          lightTheme ? style.s_w_l : style.s_w_d
+        }`}
+      >
         <div
-          className={`${style.title} ${lightTheme? style.t_l : style.t_d} d-flex align-items-center justify-content-between`}
+          className={`${style.title} ${
+            lightTheme ? style.t_l : style.t_d
+          } d-flex align-items-center justify-content-between`}
         >
-          <h3>Latest Transactions</h3>
+          <h3>Latest Blocks</h3>
           <div>
             <select
-              className={`form-select ${style.my_select} ${lightTheme?style.my_select_l : style.my_select_d }`}             
+              className={`form-select ${style.my_select} ${
+                lightTheme ? style.my_select_l : style.my_select_d
+              }`}
             >
               <option value="Shard 0">Shard 0</option>
               <option value="Shard 0">Shard 0</option>

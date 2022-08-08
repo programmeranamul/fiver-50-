@@ -17,21 +17,25 @@ function Token() {
   const links = [
     {
       text: "HRC20 tokens",
-      link: "/",
+      link: "/hrc20",
     },
     {
       text: "HRC721 tokens",
-      link: "/",
+      link: "/hrc721",
     },
     {
       text: "HRC1155 tokens",
-      link: "/",
+      link: "/hrc1155",
     },
   ];
   return (
     <div className="position-relative">
       <button className={style.my_btn} onClick={handelDropDown}>
-        <span className={`${lightTheme? style.token_l : style.token_d} ${style.btn_text}`}>
+        <span
+          className={`${lightTheme ? style.token_l : style.token_d} ${
+            style.btn_text
+          }`}
+        >
           Tokens <Icon icon="fe:drop-down" className={style.icon} />
         </span>
       </button>
