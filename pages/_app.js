@@ -12,7 +12,7 @@ function MyApp({ Component, pageProps }) {
   return (
     <ThemeProvider >
       <Header />
-      <Search />
+      <Search className="container"/>
       <Component {...pageProps} />
       <Footer />
     </ThemeProvider>

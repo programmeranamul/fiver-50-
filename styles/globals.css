@@ -245,6 +245,12 @@ tbody tr td:last-child {
   line-height: 40px;
   font-weight: 600;
 }
+.title-2 {
+  margin-top: 0px;
+  font-size: 32px;
+  line-height: 40px;
+  font-weight: 600;
+}
 
 /* input */
 .my-input {
@@ -284,7 +290,9 @@ tbody tr td:last-child {
 .footer-color {
   color: var(--footer-color);
 }
-
+.table-block-wrapper{
+  padding: 28px;
+}
 /* media query */
 @media (max-width: 767.98px) {
   .data-table {

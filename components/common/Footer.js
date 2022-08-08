@@ -31,10 +31,7 @@ function Footer() {
         <div className={style.link_wrpper}>
           {links.map((el) => (
             <a rel="noreferrer" key={el.link} href={el.link} target="_blank">
-              <Icon
-                icon={el.icon}
-                className={`footer-color ${style.icon}`}
-              />
+              <Icon icon={el.icon} className={`footer-color ${style.icon}`} />
             </a>
           ))}
         </div>

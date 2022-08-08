@@ -1,13 +1,22 @@
 .my_group {
-  border-radius: 4px;
+  border-radius: 4px; 
+  border-right: none !important;
+}
+.my_group_d{
+  background-color: transparent;
+  border: 1px solid rgb(55, 88, 115);
+
+}
+.my_group_l{
+  background-color: #fff;
   border: 1px solid rgb(231, 236, 247);
-  border-right: none;
 }
 
+
+
+
 .my_input,
-.my_input:focus {
-  border: 1px solid rgb(231, 236, 247);
-  border-left: none;
+.my_input:focus {  
   outline: none;
   box-shadow: none;
   padding-left: 0;
@@ -20,9 +29,31 @@
 .my_input::placeholder {
   /* modern browser */
   font-size: 14px;
-  color: rgb(231, 236, 247);
 }
 
 .icon {
   font-size: 24px;
+}
+.my_input_l{
+  background-color: #fff;
+  border: 1px solid rgb(231, 236, 247) !important;
+  border-left: none !important;
+  color: rgb(85, 98, 109) !important;
+}
+.my_input_d{
+  background-color: transparent;
+  border: 1px solid rgb(55, 88, 115) !important;
+  border-left: none !important;
+  color: #fff !important;
+
+}
+.my_input_d:focus{
+  background-color: transparent;
+}
+
+.icon_d{
+  color: rgb(105, 250, 189);
+}
+.icon_l{
+  color: rgb(0, 174, 233);
 }

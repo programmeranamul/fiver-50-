@@ -1,0 +1,47 @@
+.wrapper {
+  display: flex;
+  margin-top: 24px;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.left {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  color: red !important;
+}
+
+.select_l {
+  font-weight: 600;
+  color: rgb(85, 98, 109);
+  border: 1px solid rgb(231, 236, 247);
+  border-radius: 4px;
+}
+
+.select_d {
+  font-weight: 600;
+  color: rgb(248, 248, 248);
+  border: 1px solid rgb(55, 88, 115);
+  border-radius: 4px;
+  background-color: transparent;
+}
+.select_d option{
+    background-color: black !important;
+}
+.text_d {
+  font-size: 14px;
+  line-height: 20px;
+}
+.text_l {
+  font-size: 14px;
+  line-height: 20px;
+  color: rgb(85, 98, 109);
+}
+.text_d {
+  font-size: 14px;
+  line-height: 20px;
+  color: rgb(248, 248, 248);
+}
