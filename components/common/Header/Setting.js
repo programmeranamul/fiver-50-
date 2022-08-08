@@ -44,7 +44,7 @@ function Setting() {
   return (
     <div className="position-relative">
       <button className={style.my_btn} onClick={handelDropDown}>
-        <span className={`white-color ${style.btn_text}`}>
+        <span className={`${style.btn_text}`}>
           <Icon icon="icon-park-solid:setting" className={style.icon} />
         </span>
       </button>

@@ -3,9 +3,10 @@ import Setting from './Setting';
 import Tools from './Tools';
 import Token from './Token';
 import AddressFormat from './AddressFormat';
+import { useTheme } from "../../../lib/ThemeContext";
 
 function NavMenu() {
- 
+
   return (
     <div className={`d-flex align-items-center ${style.right_area}`}>
     <AddressFormat />

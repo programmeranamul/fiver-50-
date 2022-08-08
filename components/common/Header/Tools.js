@@ -25,7 +25,7 @@ function Tools() {
   return (
     <div className="position-relative">
       <button className={style.my_btn} onClick={handelDropDown}>
-        <span className={`white-color ${style.btn_text}`}>
+        <span className={`${style.btn_text}`}>
           Tools <Icon icon="fe:drop-down" className={style.icon} />
         </span>
       </button>

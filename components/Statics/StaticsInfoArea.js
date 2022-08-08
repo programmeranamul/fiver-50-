@@ -1,10 +1,14 @@
+import { useTheme } from "../../lib/ThemeContext";
 import style from "../../styles/Statics.module.css";
 import StaticsContent from "./StaticsContent";
 
-function StaticsInfoArea() {
+function StaticsInfoArea() {  
+  const { theme, setTheme, my } = useTheme();
+const lightTheme = theme === "Light";
+
   return (
     <article className={style.left_site}>
-          <div className={style.content_sec}>
+          <div className={`${style.content_sec} ${lightTheme? style.c_s_l : style.c_s_d}`}>
             <StaticsContent
               mainText="ONE PRICE"
               subText="$ 0.0222"
@@ -20,14 +24,14 @@ function StaticsInfoArea() {
               icon="fa:group"
             />
           </div>
-          <div className={style.content_sec}>
+          <div className={`${style.content_sec} ${lightTheme? style.c_s_l : style.c_s_d}`}>
             <StaticsContent
               mainText="SHARD COUNT"
               subText="4"
               icon="fa:group"
             />
             <div className={style.line}></div>
-            <div className={style.line_1}></div>
+            <div className={`${lightTheme? style.l_1_l:style.l_1_d} ${style.line_1}`}></div>
             <div className={style.line_2}></div>
             <StaticsContent
               mainText="BLOCK LATENCY"
