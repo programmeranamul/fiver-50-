@@ -28,3 +28,21 @@
 .tm_l {
   color: rgb(117, 135, 150);
 }
+
+.tab_hader {
+  margin-bottom: 12px;
+  padding-bottom: 12px;
+}
+.tab_hader_l {
+  border-bottom: 1px solid rgb(231, 236, 247);
+}
+.tab_hader_d {
+  border-bottom: 1px solid rgb(55, 88, 115);
+}
+
+.tab_hader_l p {
+  color: rgb(85, 98, 109);
+}
+.tab_hader_d p {
+  color: #fff;
+}

@@ -3,8 +3,9 @@ import style from "../../../styles/TableHeader.module.css";
 import { Icon } from "@iconify/react";
 import TablePagination from "./TablePagination";
 
-function TableHeader() {
+function TableHeader({ dataPerRow }) {
   const { theme, setTheme, my } = useTheme();
+  
   return (
     <div
       className={`${theme === "Light" ? style.wrapper_l : style.wrapper_d} ${
@@ -16,7 +17,7 @@ function TableHeader() {
           style.text
         }`}
       >
-        <b className={style.cunt}>25 </b>tokens shown
+        <b className={style.cunt}>{dataPerRow} </b>tokens shown
       </p>
       <TablePagination />
     </div>

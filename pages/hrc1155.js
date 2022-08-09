@@ -6,7 +6,6 @@ function hrc1155() {
     <section>
     <article className="container">
     <h1 className="title-2 dark-white-color fw-700">10 tokens shown</h1>
-    {/* <HRC721TableWrapper /> */}
    <HRC1155TableWrapper />
     </article>
   </section>

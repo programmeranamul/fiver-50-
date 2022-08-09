@@ -55,7 +55,7 @@ function BlockDataTable({ tableRow, tableData }) {
         </table>
       </div>
       <div className="p-4">
-        <ViewAllBtn text="VIEW ALL TRANSACTIONS" link="/" />
+        <ViewAllBtn text="VIEW ALL BLOCKS" link="/blocks/shard/1" />
       </div>
     </>
   );
