@@ -9,7 +9,6 @@ function BlockHashTable() {
   const { theme, setTheme, my } = useTheme();
   const [showMore, setShowMore] = useState(true);
   const lightTheme = theme === "Light";
-  console.log(showMore);
   return (
     <div
       className={`${lightTheme ? style.wrapper_l : style.wrapper_d} ${

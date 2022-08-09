@@ -1,6 +1,7 @@
 import { useTheme } from "../../lib/ThemeContext";
 import style from "../../styles/TxHash.module.css";
 import TxHashTab from "./../../components/TxHash/TxHashTab";
+import TxTransactionDetails from "./../../components/TxHash/TxTransactionDetails";
 
 function TxHash() {
   const { theme, setTheme, my } = useTheme();
@@ -17,6 +18,9 @@ function TxHash() {
           }`}
         >
           <TxHashTab />
+          <div>
+            <TxTransactionDetails />
+          </div>
         </article>
       </div>
     </section>
