@@ -1,8 +1,9 @@
-import { useTheme } from "../../lib/ThemeContext";
-import style from "../../styles/BlockDataTable.module.css"
+import React from 'react'
+import { useTheme } from '../../lib/ThemeContext';
 import NextPagePagination from './../common/NextPagePagination';
+import style from "../../styles/BlockDataTable.module.css"
 
-function BlockPageDataTableHeader() {
+function TransctionPageTableHeader({dataPerRow}) {
     const { theme, setTheme, my } = useTheme();
     const lightTheme = theme === "Light";
   return (
@@ -12,11 +13,11 @@ function BlockPageDataTableHeader() {
     }`}
   >
     <p className="mb-0">
-      <b> 10</b> blocks shown, from <b>#32,484,144</b> to <b>#32,484,153</b>
+      <b> {dataPerRow}</b> transactions shown
     </p>
-     <NextPagePagination />
+    <NextPagePagination />
   </div>
   )
 }
 
-export default BlockPageDataTableHeader
+export default TransctionPageTableHeader

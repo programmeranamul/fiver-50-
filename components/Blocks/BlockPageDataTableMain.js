@@ -32,14 +32,16 @@ function BlockPageDataTableMain({ datas }) {
               </td>
               <td className={style.td}>{data.Timestamp}</td>
               <td>
-                <Link href="/">
-                  <a>
-                    <span>
-                      <Icon icon="ic:outline-copy-all" />
-                    </span>
-                    <span>{data.Miner}</span>
-                  </a>
-                </Link>
+                <div className={style.link}>
+                  <span>
+                    <Icon icon="ic:outline-copy-all" />
+                  </span>
+                  <Link href="/">
+                    <a>
+                      <span>{data.Miner}</span>
+                    </a>
+                  </Link>
+                </div>
               </td>
               <td className={style.td}>{data.Transactions}</td>
             </tr>

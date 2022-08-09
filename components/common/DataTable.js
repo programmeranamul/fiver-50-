@@ -61,7 +61,7 @@ function DataTable({ tableRow, tableData }) {
         </table>
       </div>
       <div className="p-4">
-        <ViewAllBtn text="VIEW ALL TRANSACTIONS" link="/" />
+        <ViewAllBtn text="VIEW ALL TRANSACTIONS" link="/transactions/shard/0" />
       </div>
     </>
   );

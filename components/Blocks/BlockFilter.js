@@ -11,8 +11,9 @@ function BlockFilter({ filtersList }) {
   const router = useRouter();
 
   const handelChange = (e) => {
-    const id = e.target.value.slice(-1);
-    router.push("/blocks/shard/" + id);
+    // const id = e.target.value.slice(-1);
+    router.push(e.target.value);
+    // console.log(e.target.value)
   };
 
   return (
@@ -31,7 +32,7 @@ function BlockFilter({ filtersList }) {
             onChange={(e) => handelChange(e)}
           >
             {filtersList.map((data) => (
-              <option onClick={() => console.log("click")} key={data.text}>
+              <option value={data.link} key={data.text}>
                 {data.text}
               </option>
             ))}
