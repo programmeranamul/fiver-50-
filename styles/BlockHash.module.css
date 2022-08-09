@@ -1,0 +1,106 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  padding: 24px;
+}
+
+.wrapper_l {
+  background-color: rgb(255, 255, 255);
+  color: rgb(85, 98, 109);
+  border: 1px solid rgb(231, 236, 247);
+}
+
+.wrapper_d {
+  background-color: rgb(27, 41, 94);
+  color: rgb(248, 248, 248);
+  border: 1px solid rgb(55, 88, 115);
+}
+
+.table_container {
+  overflow: auto;
+}
+
+.table {
+  border-collapse: collapse;
+  display: flex;
+  min-width: 950px;
+}
+.tbody {
+  width: 100%;
+}
+
+.tbody tr {
+  display: flex;
+}
+.tbody th {
+  text-align: start;
+  width: 33.33%;
+  padding: 16px 8px;
+  font-weight: 300;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 15px;
+}
+.tr th svg {
+  font-size: 13px;
+}
+.tbody_l th {
+  border-bottom: 1px solid rgb(231, 236, 247);
+}
+.tbody_d th {
+  color: rgb(248, 248, 248);
+  border-bottom: 1px solid rgb(55, 88, 115);
+}
+
+.tbody td {
+  padding: 16px 8px;
+  width: 66.66%;
+  max-width: 66.66%;
+  display: flex;
+  align-items: center;
+  gap: 1px;
+}
+.tbody_l td {
+  border-bottom: 1px solid rgb(231, 236, 247);
+}
+.tbody_d td {
+  color: rgb(248, 248, 248);
+  border-bottom: 1px solid rgb(55, 88, 115);
+}
+
+/* has col style */
+
+.has_col_l td {
+  color: rgb(0, 174, 233) !important;
+}
+.has_col_l td svg {
+  cursor: pointer;
+}
+.has_col_l td a {
+  color: rgb(0, 174, 233) !important;
+}
+
+.has_col_d td {
+  color: rgb(111, 255, 176);
+}
+.has_col_d td a {
+  color: rgb(111, 255, 176);
+}
+.icon_w {
+  display: flex;
+  align-items: center;
+  grid-gap: 20px;
+  gap: 5px;
+  margin-left: 7px;
+}
+
+/* copy icon */
+.copy_d {
+  color: rgb(111, 255, 176) !important;
+  cursor: pointer;
+}
+.copy_l {
+  color: rgb(0, 174, 233) !important;
+  cursor: pointer;
+}
