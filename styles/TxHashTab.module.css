@@ -1,0 +1,50 @@
+.wrapper {
+  display: flex;
+  max-width: 100%;
+  align-self: flex-start;
+  flex-flow: row wrap;
+  flex: 0 0 auto;
+  justify-content: flex-start;
+}
+
+.tab {
+  padding-bottom: 6px;
+  margin: 3px 12px;
+  cursor: pointer;
+  transition: all 0.4s;
+}
+.tab_l p {
+  color: rgb(85, 98, 109);
+  transition: all 0.3s;
+}
+.tab_l:hover {
+  border-bottom: 2px solid rgb(0, 0, 0);
+}
+.tab_d:hover {
+  border-bottom: 2px solid #fff;
+}
+.tab:hover .tab p {
+  color: rgb(0, 0, 0);
+}
+.tab_d:hover .tab_d p {
+  color: #fff !important;
+}
+
+.tab_l.tab_active {
+  border-bottom: 2px solid rgb(0, 0, 0);
+}
+.tab_d.tab_active {
+  border-bottom: 2px solid #fff;
+}
+.tab_l.tab_inactive {
+  border-bottom: 2px solid rgb(0, 174, 233);
+}
+.tab_l.tab_inactive:hover {
+  border-bottom: 2px solid #000;
+}
+.tab_d.tab_inactive {
+  border-bottom: 2px solid rgb(111, 255, 176);
+}
+.tab_d.tab_inactive:hover {
+  border-bottom: 2px solid #fff;
+}
