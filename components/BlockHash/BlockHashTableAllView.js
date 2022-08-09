@@ -6,8 +6,9 @@ import { useTheme } from "../../lib/ThemeContext";
 import BlockHashCopyNormal from "./BlockHashCopyNormal";
 import BlockHasNormalCopyWithLink from "./BlockHasNormalCopyWithLink";
 import BlockHashTransactionsCol from "./BlockHashTransactionsCol";
+import BlockHashHideOptions from "./BlockHashHideOptions";
 
-function BlockHashTableAllView() {
+function BlockHashTableAllView({ showMore }) {
   const { theme, setTheme, my } = useTheme();
   const lightTheme = theme === "Light";
 
@@ -64,28 +65,25 @@ function BlockHashTableAllView() {
             link={`/address/${proposer}`}
           />
           <BlockHashCopyNormal title=" Gas Limit" value={gasLimit} />
-          <BlockHashCopyNormal title=" Gas Used" value={gasUsed} />
-          <BlockHashCopyNormal title="Size" value={size} />
-          <BlockHashNormal title="Extra Data" value={extraData} />
-          <BlockHashNormal title="Difficulty" value={difficulty} />
-          <BlockHashCopyNormal title="Logs Bloom" value={`${logsBloom.slice(0,60)}...`} />
-          <BlockHashNormal title=" Mix Hash" value={mixHash} />
-          <BlockHashNormal title=" Nonce" value={nonce} />
-          <BlockHasNormalCopyWithLink
-            title="Parent Hash"
-            value={parent_Hash}
-            link={`/block/${parent_Hash}`}
-          />
-          <BlockHashCopyNormal title=" Receipts Root" value={receipts_Root} />
-          <BlockHashNormal title="SHA3 Uncles" value={SHA3ncles} />
-          <BlockHashCopyNormal title="State Root" value={stateRoot} />
-          <BlockHashCopyNormal
-            title="Transactions Root"
-            value={transactions_Root}
-          />
-          <BlockHashNormal title=" Uncles" value={uncles} />
-          <BlockHashCopyNormal title="Epoch" value={epoch} />
-          <BlockHashCopyNormal title="View ID" value={viewID} />
+          {showMore && (
+            <BlockHashHideOptions
+              gasUsed={gasUsed}
+              size={size}
+              extraData={extraData}
+              difficulty={difficulty}
+              logsBloom={logsBloom}
+              mixHash={mixHash}
+              nonce={nonce}
+              parent_Hash={parent_Hash}
+              receipts_Root={receipts_Root}
+              SHA3ncles={SHA3ncles}
+              stateRoot={stateRoot}
+              transactions_Root={transactions_Root}
+              uncles={uncles}
+              epoch={epoch}
+              viewID={viewID}
+            />
+          )}
         </tbody>
       </table>
     </div>

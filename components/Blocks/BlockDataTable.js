@@ -1,6 +1,7 @@
 import { useTheme } from "../../lib/ThemeContext";
 import ViewAllBtn from "./../common/ViewAllBtn";
 import style from "../../styles/BlockDataTable.module.css";
+import Link from "next/link";
 
 function BlockDataTable({ tableRow, tableData }) {
   const { theme, setTheme, my } = useTheme();
@@ -33,7 +34,7 @@ function BlockDataTable({ tableRow, tableData }) {
                     lightTheme ? style.sh_l : style.sh_d
                   }`}
                 >
-                  {data?.height}
+                  <Link href={`/block/${data.link}`}><a >{data?.height}</a></Link>
                 </td>
                 <td
                   className={`${lightTheme ? style.td_l : style.td_d} ${

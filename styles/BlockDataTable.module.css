@@ -8,9 +8,15 @@
 .sh_l {
   color: rgb(0, 174, 233);
 }
+.sh_l a{
+  color: rgb(0, 174, 233) !important;
+}
 
 .sh_d {
   color: rgb(105, 250, 189);
+}
+.sh_d a{
+  color: rgb(105, 250, 189) !important;
 }
 
 .tr_l {

@@ -14,7 +14,7 @@ function BlockHashTransactionsCol({ title, links }) {
       </th>
       <td className="flex-column align-items-start">        
         {links?.map((link, index) => (
-          <div key={index}>
+          <div key={index} className="d-flex align-items-center">
             <Icon
               className={lightTheme ? style.copy_l : style.copy_d}
               icon="ic:outline-copy-all"
