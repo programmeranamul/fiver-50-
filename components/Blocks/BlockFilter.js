@@ -37,8 +37,7 @@ function BlockFilter({ filtersList }) {
             ))}
           </select>
         </div>
-      </div>
-      <NextPagePagination />
+      </div>     
     </article>
   );
 }

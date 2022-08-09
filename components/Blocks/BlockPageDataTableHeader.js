@@ -1,5 +1,6 @@
 import { useTheme } from "../../lib/ThemeContext";
 import style from "../../styles/BlockDataTable.module.css"
+import NextPagePagination from './../common/NextPagePagination';
 
 function BlockPageDataTableHeader() {
     const { theme, setTheme, my } = useTheme();
@@ -13,6 +14,7 @@ function BlockPageDataTableHeader() {
     <p className="mb-0">
       <b> 10</b> blocks shown, from <b>#32,484,144</b> to <b>#32,484,153</b>
     </p>
+    <NextPagePagination />
   </div>
   )
 }

@@ -20,7 +20,7 @@ function BlockId() {
   return (
     <section>
       <div className="container">
-        <h1 className="title-2 dark-white-color fw-700">Blocks</h1>
+        <h1 className="title-2 dark-white-color fw-700 mb-4">Blocks</h1>
         <BlockFilter filtersList={filtersList}/>
         <BlockPageDataTable />
       </div>
