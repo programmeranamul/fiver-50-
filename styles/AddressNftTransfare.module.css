@@ -1,0 +1,99 @@
+.table_wrapper {
+  overflow: auto;
+  margin-top: 10px;
+}
+
+.table {
+  width: 100%;
+  min-width: 1266px;
+  table-layout: auto;
+  position: relative;
+  border-spacing: 0px;
+  border-collapse: separate;
+  height: auto;
+}
+
+.tr th {
+  padding: 16px 8px;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.tr_l th {
+  background-color: rgb(244, 247, 249);
+  color: rgb(85, 98, 109);
+  border-top: 1px solid rgb(231, 236, 247);
+}
+
+.tr td a {
+  width: 180px !important;
+  display: block !important;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.tr_d th {
+  background-color: rgb(27, 62, 127);
+  color: rgb(248, 248, 248);
+  border-top: 1px solid rgb(55, 88, 115);
+}
+
+.type_d_out {
+  border-radius: 4px;
+  padding: 6px 3px;
+  width: 32px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 90%;
+  color: rgb(180, 125, 0);
+  background: rgb(247, 234, 204);
+  width: 36px;
+  display: block;
+}
+.type_l_in {
+  border-radius: 4px;
+  padding: 6px 3px;
+  width: 32px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 90%;
+  color: rgb(1, 146, 103);
+  background: rgb(218, 254, 244);
+  width: 36px;
+  display: block;
+}
+.tr_d td {
+  border-top: 1px solid rgb(55, 88, 115);
+  border-bottom: none !important;
+}
+.md_l,
+.md_d {
+  width: 100px;
+  display: block;
+  border-radius: 4px;
+  padding: 5px 4px;
+  text-align: center;
+  font-size: 12px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.md_l {
+  background: rgb(239, 248, 255);
+}
+.md_d {
+  background: rgb(54, 96, 173);
+  color: #fff;
+}
+
+.copy_d,
+.link_d {
+  color: rgb(105, 250, 189) !important;
+  cursor: pointer;
+}
+.copy_l,
+.link_l {
+  color: rgb(0, 174, 233) !important;
+  cursor: pointer;
+}

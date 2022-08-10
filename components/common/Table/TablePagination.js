@@ -11,7 +11,6 @@ function TablePagination() {
         style.single
       }`}
     >
-      {" "}
       First
     </div>
     <div

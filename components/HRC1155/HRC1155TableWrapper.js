@@ -8,6 +8,7 @@ import Hrc1155DataTable from './Hrc1155DataTable';
 import { Hrc1155DataCol } from '../../data/Hrc1155DataTableData';
 
 function HRC1155TableWrapper() {
+  const [dataPerRow,setDataPerRow] = useState(10)
   return (
     <div
     className={`white-blue-bg table-block-wrapper lightgray-to-light-blue`}
@@ -15,7 +16,7 @@ function HRC1155TableWrapper() {
      <Search />
      <TableHeader />
       <Hrc1155DataTable data={Hrc1155DataCol}/>
-      <TableFooter />
+      <TableFooter dataPerRow = {dataPerRow} setDataPerRow = {setDataPerRow}/>
   </div>
   )
 }

@@ -2,18 +2,11 @@ import { useTheme } from "../../lib/ThemeContext";
 import style from "../../styles/TxHashTab.module.css";
 import { useState } from "react";
 
-function TxHashTab({activeTab, setActiveTab}) {
+function TxHashTab({activeTab, setActiveTab,lists}) {
   const { theme, setTheme, my } = useTheme();
   const lightTheme = theme === "Light";
 
-  const lists = [
-    "Transaction Details",
-    "Internal Transactions (95)",
-    "Logs (56)",
-  ];
-
  
-
   return (
     <div className={style.wrapper}>
       {lists.map((list, index) => (

@@ -126,6 +126,9 @@
   color: var(--lightGray-popin);
 }
 
+.w-wrapper{
+  min-height: 550px;
+}
 
 /* background class */
 .lightGray-white-bg{

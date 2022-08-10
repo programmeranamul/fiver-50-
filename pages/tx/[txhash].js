@@ -11,6 +11,14 @@ function TxHash() {
   const lightTheme = theme === "Light";
 
   const [activeTab, setActiveTab] = useState(0);
+
+  const tablists = [
+    "Transaction Details",
+    "Internal Transactions (95)",
+    "Logs (56)",
+  ];
+
+
   return (
     <section>
       <div className="container">
@@ -22,7 +30,7 @@ function TxHash() {
             lightTheme ? style.main_wrapper_l : style.main_wrapper_d
           }`}
         >
-          <TxHashTab activeTab={activeTab} setActiveTab={setActiveTab} />
+          <TxHashTab activeTab={activeTab} setActiveTab={setActiveTab} lists={tablists} />
           <div>
             {activeTab === 0 && <TxTransactionDetails />}
             {activeTab === 1 && <InternalTransactions />}

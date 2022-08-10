@@ -9,7 +9,7 @@ function RecordsPerPage({ dataPerRow, setDataPerRow }) {
   };
 
   return (
-    <>
+    <> 
       <div>
         <select
           onChange={handelSelected}
