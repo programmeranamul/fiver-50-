@@ -5,12 +5,9 @@ import style from "../styles/Home.module.css";
 import Notify from "simple-notify";
 import "simple-notify/dist/simple-notify.min.css";
 import { pushNotify } from "./../components/common/PushNotify";
+import { copyText } from "./../lib/CopyFunction";
 
 function Index() {
-  const chec = () => {
-    console.log("sjkdh");
-    pushNotify("I love you jui");
-  };
   return (
     <>
       <Statics />
@@ -19,7 +16,7 @@ function Index() {
           <LatestBlocks />
           <Transactions />
         </div>
-        <button onClick={chec}>check</button>
+        <button onClick={() => copyText("jdshjhgf")}>check</button>
       </div>
     </>
   );

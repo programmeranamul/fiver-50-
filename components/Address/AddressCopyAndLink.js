@@ -14,7 +14,7 @@ function AddressCopyAndLink() {
           <Icon
             icon="ic:outline-copy-all"
             className={lightTheme ? style.copy_l : style.copy_d}
-          />{" "}
+          />
         </span>
         <span>
           <Link href="/">

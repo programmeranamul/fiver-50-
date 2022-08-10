@@ -38,7 +38,6 @@
   text-overflow: ellipsis;
 }
 
-
 .type_d_out {
   border-radius: 4px;
   padding: 6px 3px;
@@ -51,7 +50,7 @@
   width: 36px;
   display: block;
 }
-.type_l_in{
+.type_l_in {
   border-radius: 4px;
   padding: 6px 3px;
   width: 32px;
@@ -72,7 +71,7 @@
   width: 100px;
   display: block;
   border-radius: 4px;
-  padding: 2px 4px;
+  padding: 5px 4px;
   text-align: center;
   font-size: 12px;
   white-space: nowrap;
@@ -94,8 +93,10 @@
 }
 .copy_l,
 .link_l {
-  color: rgb(0, 174, 233) !important; cursor: pointer;
+  color: rgb(0, 174, 233) !important;
+  cursor: pointer;
 }
-.copy_d,.copy_l{
+.copy_d,
+.copy_l {
   margin-right: 5px;
 }
