@@ -4,15 +4,30 @@ import { useState } from "react";
 import MyDropDown from "./../MyDropDown";
 import Link from "next/link";
 import { useTheme } from "../../../lib/ThemeContext";
+import {useEffect, useRef} from "react"
 
 function Token() {
   const [open, setOpen] = useState(false);
   const { theme, setTheme, my } = useTheme();
   const lightTheme = theme == "Light";
 
+  const ref= useRef()
+
   const handelDropDown = () => {
     setOpen(!open);
   };
+
+  useEffect(() => {
+    const chechPopUp = (e) => {
+      if (open && ref.current && !ref?.current?.contains(e.target)) {      
+        setOpen(false);
+      } 
+    };
+    document.addEventListener("click", chechPopUp);
+    return () => {
+      document.removeEventListener("click", chechPopUp);
+    };
+  }, [open]);
 
   const links = [
     {
@@ -29,7 +44,7 @@ function Token() {
     },
   ];
   return (
-    <div className="position-relative">
+    <div className="position-relative" ref={ref}>
       <button className={style.my_btn} onClick={handelDropDown}>
         <span
           className={`${lightTheme ? style.token_l : style.token_d} ${

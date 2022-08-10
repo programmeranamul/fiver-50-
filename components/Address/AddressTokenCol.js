@@ -11,29 +11,11 @@ function AddressTokenCol() {
   const [showToken, setShowToken] = useState(false);
 
   const ref = useRef();
-
-  //   useEffect(() => {
-  //     const chechPopUp = (e) => {
-
-  //     if(showToken && !ref?.current?.contains(e.target) ){
-  //         console.log("if",ref.current )
-  //         console.log(ref.current.contains(e.target))
-  //     }else{
-  //         console.log("else",showToken )
-  //     }
-  //     };
-
-  //     document.addEventListener("click", chechPopUp);
-  //     return () => {
-  //       document.removeEventListener("click", chechPopUp);
-  //     };
-  //   }, [showToken]);
-
-  console.log("10", showToken);
+  
   useEffect(() => {
     const chechPopUp = (e) => {
       if (showToken && ref.current && !ref?.current?.contains(e.target)) {
-        // setShowToken(false)
+      
         console.log("1", showToken);
         setShowToken(false);
         console.log("2", showToken);
@@ -57,7 +39,10 @@ function AddressTokenCol() {
         } ${style.token_value}`}
         ref={ref}
       >
-        <span onClick={() => setShowToken(!showToken)} className="d-flex w-100 justify-content-between">
+        <span
+          onClick={() => setShowToken(!showToken)}
+          className="d-flex w-100 justify-content-between"
+        >
           <span>HRC20</span>
           <span>
             <Icon icon="bxs:down-arrow" />
