@@ -1,0 +1,55 @@
+.s_wrapper p {
+  margin-bottom: 0;
+}
+.s_wrapper {
+  flex-direction: column;
+  padding-bottom: 12px;
+  display: flex;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.s_wrapper_d {
+  border-bottom: 1px solid rgb(55, 88, 115);
+}
+.s_wrapper_l {
+    border-bottom: 1px solid rgb(231, 236, 247);
+}
+
+.title {
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.s_wrapper_d .title {
+  color: rgb(95, 152, 199);
+}
+.s_wrapper_l .title {
+  color: rgb(117, 135, 150);
+}
+
+.address_wrapper {
+  line-height: 0;
+}
+
+.copy_l {
+  color: rgb(0, 174, 233);
+  cursor: pointer;
+}
+.copy_d {
+  color: rgb(105, 250, 189);
+  cursor: pointer;
+}
+
+.link_d {
+  color: rgb(105, 250, 189) !important;
+  font-size: 14px;
+}
+.link_l {
+  color: rgb(0, 174, 233) !important;
+  font-size: 14px;
+}
+
+.long {
+  word-break: break-all;
+}
