@@ -2,7 +2,7 @@ import { useTheme } from "../../lib/ThemeContext";
 import style from "../../styles/TxHashTab.module.css";
 import { useState } from "react";
 
-function TxHashTab() {
+function TxHashTab({activeTab, setActiveTab}) {
   const { theme, setTheme, my } = useTheme();
   const lightTheme = theme === "Light";
 
@@ -12,7 +12,7 @@ function TxHashTab() {
     "Logs (56)",
   ];
 
-  const [activeTab, setActiveTab] = useState(0);
+ 
 
   return (
     <div className={style.wrapper}>

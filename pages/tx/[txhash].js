@@ -1,12 +1,16 @@
 import { useTheme } from "../../lib/ThemeContext";
 import style from "../../styles/TxHash.module.css";
 import TxHashTab from "./../../components/TxHash/TxHashTab";
-import InternalTransactions from './../../components/InternalTransaction/InternalTransactions';
-import TxTransitionLogs from './../../components/TxTransitionLogs/TxTransitionLogs';
+import InternalTransactions from "./../../components/InternalTransaction/InternalTransactions";
+import TxTransitionLogs from "./../../components/TxTransitionLogs/TxTransitionLogs";
+import { useState } from "react";
+import TxTransactionDetails from "./../../components/TxHash/TxTransactionDetails";
 
 function TxHash() {
   const { theme, setTheme, my } = useTheme();
   const lightTheme = theme === "Light";
+
+  const [activeTab, setActiveTab] = useState(0);
   return (
     <section>
       <div className="container">
@@ -18,11 +22,12 @@ function TxHash() {
             lightTheme ? style.main_wrapper_l : style.main_wrapper_d
           }`}
         >
-          <TxHashTab />
+          <TxHashTab activeTab={activeTab} setActiveTab={setActiveTab} />
           <div>
-            {/* <TxTransactionDetails /> */}
-            {/* <InternalTransactions /> */}
-            <TxTransitionLogs />
+            {activeTab === 0 && <TxTransactionDetails />}
+            {activeTab === 1 && <InternalTransactions />}
+            {activeTab === 2 && <TxTransitionLogs />}
+            
           </div>
         </article>
       </div>
