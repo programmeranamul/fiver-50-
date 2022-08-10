@@ -9,7 +9,7 @@
 
 .tab {
   padding-bottom: 6px;
-  margin: 3px 12px;
+  margin: 3px 12px 3px 0px;
   cursor: pointer;
   transition: all 0.4s;
 }

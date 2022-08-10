@@ -18,7 +18,7 @@ function BlockHashTransactionsCol({ title, links }) {
             <Icon
               className={lightTheme ? style.copy_l : style.copy_d}
               icon="ic:outline-copy-all"
-            />{" "}
+            />
             <Link href={"/block/"+link}>
               <a className={lightTheme ? style.copy_l : style.copy_d}>
                 {link}

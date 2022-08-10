@@ -1,0 +1,84 @@
+.table_wrapper {
+  overflow: auto;
+}
+.table {
+  width: 100%;
+  min-width: 960px;
+  table-layout: auto;
+  border-collapse: collapse;
+}
+.tr_l {
+}
+
+.tr th,
+.tr td,
+.m_tr td {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 300;
+  padding: 16px 8px;
+}
+
+.tr_l th {
+  background-color: rgb(244, 247, 249);
+  color: rgb(85, 98, 109);
+  border-top: 1px solid rgb(231, 236, 247);
+}
+.tr_d th {
+  background-color: rgb(27, 62, 127);
+  color: rgb(95, 152, 199);
+  border-top: 1px solid rgb(55, 88, 115);
+}
+.tr_l td {
+  background-color: #fff;
+  color: rgb(85, 98, 109);
+  border-top: 1px solid rgb(231, 236, 247);
+}
+.tr_d td {
+  background-color: transparent;
+  color: rgb(95, 152, 199);
+  border-top: 1px solid rgb(55, 88, 115);
+  color: #fff;
+}
+.tr_d:hover .td {
+  background-color: rgb(27, 62, 127) !important;
+}
+.tr_l:hover .td {
+  background-color: rgb(244, 247, 249) !important;
+}
+.tr_l th {
+  background-color: rgb(244, 247, 249);
+  color: rgb(85, 98, 109);
+  border-top: 1px solid rgb(231, 236, 247);
+}
+.tr_d th {
+  background-color: rgb(27, 62, 127);
+  color: rgb(95, 152, 199);
+  border-top: 1px solid rgb(55, 88, 115);
+}
+
+.copy_l,
+.tr_l a {
+  color: rgb(0, 174, 233) !important;
+  cursor: pointer;
+}
+.copy_d,
+.tr_d a {
+  color: rgb(105, 250, 189);
+  cursor: pointer;
+}
+
+.m_td {
+  padding-left: 20px;
+}
+.m_tr_d:hover .m_td {
+  background-color: rgb(27, 62, 127);
+}
+.m_tr_l:hover .m_td {
+  background-color: rgb(244, 247, 249);
+}
+
+.td_1 {
+  padding: 0 20px !important;
+  cursor: pointer;
+}

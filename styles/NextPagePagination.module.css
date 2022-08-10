@@ -1,9 +1,10 @@
 .wrapper {
   display: flex;
-  gap: 20px;
+  gap: 8px;
 }
 .wrapper svg {
   cursor: pointer;
+  font-size: 12px;
   /* font-size: 24px; */
 }
 
@@ -12,4 +13,27 @@
 }
 .wrapper_d svg {
   color: rgb(248, 248, 248);
+}
+
+.wrapper_l div {
+  padding: 0 8px;
+  border-radius: 4px;
+  height: 28px;
+  opacity: 0.6;
+  border: 1px solid rgb(231, 236, 247);
+  background: rgb(243, 243, 243);
+  padding: 4px 10px;
+  display: flex;
+  align-items: center;
+}
+.wrapper_d div {
+  padding: 0 8px;
+  border-radius: 4px;
+  height: 28px;
+  opacity: 0.6;
+  border: 1px solid rgb(55, 88, 115);
+  background: rgb(3, 9, 33);
+  padding: 4px 10px;
+  display: flex;
+  align-items: center;
 }
