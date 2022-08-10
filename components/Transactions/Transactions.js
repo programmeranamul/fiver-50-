@@ -4,7 +4,6 @@ import DataTable from "./../common/DataTable";
 import { latestedTransactionTableRow } from './../../data/latestTransactionData';
 import { useTheme } from "../../lib/ThemeContext";
 
-// const tableRow = ["Shard", "Hash", "From", "To", "Timestamp"];
 
 function Transactions() {
   const { theme, setTheme, my } = useTheme();

@@ -4,6 +4,7 @@ import { Icon } from "@iconify/react";
 import { useTheme } from "../../lib/ThemeContext";
 import Link from "next/link";
 import copy from 'copy-text-to-clipboard';
+import { copyText } from './../../lib/CopyFunction';
 
 function HrcDataTable({ data }) {
   const { theme, setTheme, my } = useTheme();
@@ -57,10 +58,10 @@ function HrcDataTable({ data }) {
                   } ${style.address}`}
                 >
                   <span onClick={() => handelCopy(el.address)}>
-                    <Icon icon="ic:outline-copy-all" />
+                    <Icon icon="ic:outline-copy-all" onClick={() => copyText(el.address)}/>
                   </span>
                   <Link
-                    href={el.address}                   
+                    href={`/address/${el.address}`}                   
                   >
                     <a  className={
                       theme === "Light" ? style.address_l : style.address_d

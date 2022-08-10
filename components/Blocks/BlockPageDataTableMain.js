@@ -3,6 +3,7 @@ import Link from "next/link";
 import { Icon } from "@iconify/react";
 import { useTheme } from "../../lib/ThemeContext";
 import { BlockPageDataTableMainRow } from "./../../data/BlockPageDataTableMainData";
+import { copyText } from "./../../lib/CopyFunction";
 
 function BlockPageDataTableMain({ datas }) {
   const { theme, setTheme, my } = useTheme();
@@ -26,17 +27,20 @@ function BlockPageDataTableMain({ datas }) {
             <tr key={index}>
               <td className={style.td}>{data.Shard}</td>
               <td>
-                <Link href="/">
-                  <a>{data.Height}</a>
+                <Link href={`/block/${data.Height.link}`}>
+                  <a>{data.Height.text}</a>
                 </Link>
               </td>
               <td className={style.td}>{data.Timestamp}</td>
               <td>
                 <div className={style.link}>
                   <span>
-                    <Icon icon="ic:outline-copy-all" />
+                    <Icon
+                      onClick={() => copyText(data.Miner)}
+                      icon="ic:outline-copy-all"
+                    />
                   </span>
-                  <Link href="/">
+                  <Link href={`/address/${data.Miner}`}>
                     <a>
                       <span>{data.Miner}</span>
                     </a>

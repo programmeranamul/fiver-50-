@@ -4,9 +4,11 @@ import style from "../../styles/HrcDataTable.module.css";
 import { Hrc1155DataRow } from "./../../data/Hrc1155DataTableData";
 import Image from "next/image";
 import Link from "next/link";
+import { copyText } from './../../lib/CopyFunction';
 
 function Hrc1155DataTable({ data }) {
   const { theme, setTheme, my } = useTheme();
+
   return (
     <div className={style.wrapper}>
       <table className={style.table}>
@@ -61,10 +63,13 @@ function Hrc1155DataTable({ data }) {
                   } ${style.address}`}
                 >
                   <span>
-                    <Icon icon="ic:outline-copy-all" />
+                    <Icon
+                      icon="ic:outline-copy-all"
+                      onClick={() => copyText(el.address.link)}
+                    />
                   </span>
                   <span>
-                    <Link href={el.address.link}>
+                    <Link href={`/address/${el.address.link}`}>
                       <a
                         className={
                           theme === "Light" ? style.address_l : style.address_d

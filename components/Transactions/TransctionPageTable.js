@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useTheme } from "../../lib/ThemeContext";
 import { Icon } from "@iconify/react";
 import { TransctionPageTableRow } from "./../../data/TransctionPageTableData";
+import { copyText } from "./../../lib/CopyFunction";
 
 function TransctionPageTable({ datas }) {
   const { theme, setTheme, my } = useTheme();
@@ -25,17 +26,22 @@ function TransctionPageTable({ datas }) {
         <tbody>
           {datas.map((data, index) => (
             <tr key={index}>
-              <td className={`${lightTheme? style.i_l : style.i_d} ${style.td}`}>
-              {data.shard[0]}
-                  <Icon icon="akar-icons:arrow-right" />
+              <td
+                className={`${lightTheme ? style.i_l : style.i_d} ${style.td}`}
+              >
+                {data.shard[0]}
+                <Icon icon="akar-icons:arrow-right" />
                 {data.shard[0]}
               </td>
               <td>
                 <div className={style.link}>
                   <span>
-                    <Icon icon="ic:outline-copy-all" />
+                    <Icon
+                      icon="ic:outline-copy-all"
+                      onClick={() => copyText(data.hash.text)}
+                    />
                   </span>
-                  <Link href="/">
+                  <Link href={`/address/${data.hash.link}`}>
                     <a>
                       <span>{data.hash.text}</span>
                     </a>
@@ -43,16 +49,19 @@ function TransctionPageTable({ datas }) {
                 </div>
               </td>
               <td className={style.td}>
-                <Link href="/">
+                <Link href={`/block/${data.blockNumber}`}>
                   <a>{data.blockNumber}</a>
                 </Link>
               </td>
               <td>
                 <div className={style.link}>
                   <span>
-                    <Icon icon="ic:outline-copy-all" />
+                    <Icon
+                      icon="ic:outline-copy-all"
+                      onClick={() => copyText(data.form)}
+                    />
                   </span>
-                  <Link href="/">
+                  <Link href={`/address/${data.form}`}>
                     <a>
                       <span>{data.form}</span>
                     </a>
@@ -62,11 +71,14 @@ function TransctionPageTable({ datas }) {
               <td>
                 <div className={style.link}>
                   <span>
-                    <Icon icon="ic:outline-copy-all" />
+                    <Icon
+                      icon="ic:outline-copy-all"
+                      onClick={() => copyText(data.to)}
+                    />
                   </span>
-                  <Link href="/">
+                  <Link href={`/address/${data.to}`}>
                     <a>
-                      <span>{data.to}</span>
+                      <span>{data.to}</span> 
                     </a>
                   </Link>
                 </div>

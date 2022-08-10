@@ -4,7 +4,6 @@ import Statics from "./../components/Statics/Statics";
 import style from "../styles/Home.module.css";
 import Notify from "simple-notify";
 import "simple-notify/dist/simple-notify.min.css";
-import { pushNotify } from "./../components/common/PushNotify";
 import { copyText } from "./../lib/CopyFunction";
 
 function Index() {

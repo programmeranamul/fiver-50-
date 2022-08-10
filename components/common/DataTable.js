@@ -4,7 +4,6 @@ import style from "../../styles/DataTable.module.css";
 import { Icon } from "@iconify/react";
 import Link from "next/link";
 
-
 function DataTable({ tableRow, tableData }) {
   const { theme, setTheme, my } = useTheme();
   const lightTheme = theme === "Light";
@@ -32,21 +31,21 @@ function DataTable({ tableRow, tableData }) {
                   {data?.shard[1]}
                 </td>
                 <td>
-                  <Link href="/">
+                  <Link href={`/tx/${data.hash}`}>
                     <a className={lightTheme ? style.link_l : style.link_d}>
                       {data?.hash}
                     </a>
                   </Link>
                 </td>
                 <td>
-                  <Link href="/">
+                  <Link href={`/address/${data?.from}`}>
                     <a className={lightTheme ? style.link_l : style.link_d}>
                       {data?.from}
                     </a>
                   </Link>
                 </td>
                 <td>
-                  <Link href="/">
+                  <Link href={`/address/${data?.to}`}>
                     <a className={lightTheme ? style.link_l : style.link_d}>
                       {data?.to}
                     </a>
