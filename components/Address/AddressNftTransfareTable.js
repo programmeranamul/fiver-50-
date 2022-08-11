@@ -5,6 +5,7 @@ import { AddressNftTransfareDataRow } from "./../../data/AddressNftTransfareData
 import style from "../../styles/AddressNftTransfare.module.css";
 import { useState } from "react";
 import { useTheme } from "../../lib/ThemeContext";
+import { copyText } from "./../../lib/CopyFunction";
 
 function AddressNftTransfareTable({ data, hideTokeId }) {
   const { theme, setTheme, my } = useTheme();
@@ -27,6 +28,7 @@ function AddressNftTransfareTable({ data, hideTokeId }) {
                   <Icon
                     className={lightTheme ? style.copy_l : style.copy_d}
                     icon="ic:outline-copy-all"
+                    onClick={() => copyText(el.hash)}
                   />
                   <Link href={`/tx/${el.hash}`}>
                     <a className={lightTheme ? style.link_l : style.link_d}>
@@ -45,6 +47,7 @@ function AddressNftTransfareTable({ data, hideTokeId }) {
                   <Icon
                     className={lightTheme ? style.copy_l : style.copy_d}
                     icon="ic:outline-copy-all"
+                    onClick={() => copyText(el.form)}
                   />
                   <Link href={`/address/${el.form}`}>
                     <a className={lightTheme ? style.link_l : style.link_d}>
@@ -67,6 +70,7 @@ function AddressNftTransfareTable({ data, hideTokeId }) {
                   <Icon
                     className={lightTheme ? style.copy_l : style.copy_d}
                     icon="ic:outline-copy-all"
+                    onClick={() => copyText(el.to)}
                   />
                   <Link href={`/address/${el.to}`}>
                     <a className={lightTheme ? style.link_l : style.link_d}>
@@ -88,6 +92,7 @@ function AddressNftTransfareTable({ data, hideTokeId }) {
                   <Icon
                     className={lightTheme ? style.copy_l : style.copy_d}
                     icon="ic:outline-copy-all"
+                    onClick={() => copyText(el.token.link)}
                   />
                   <Link href={`/address/${el.token.link}`}>
                     <a className={lightTheme ? style.link_l : style.link_d}>

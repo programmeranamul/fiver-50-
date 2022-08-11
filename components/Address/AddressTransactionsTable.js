@@ -4,6 +4,7 @@ import style from "../../styles/AddressTransactionsTable.module.css";
 
 import { Icon } from "@iconify/react";
 import Link from "next/link";
+import { copyText } from "./../../lib/CopyFunction";
 
 function AddressTransactionsTable({ rowData, data }) {
   const { theme, setTheme, my } = useTheme();
@@ -26,6 +27,7 @@ function AddressTransactionsTable({ rowData, data }) {
                   <Icon
                     className={lightTheme ? style.copy_l : style.copy_d}
                     icon="ic:outline-copy-all"
+                    onClick={() => copyText(el.hash)}
                   />
                   <Link href={`/tx/${el.hash}`}>
                     <a className={lightTheme ? style.link_l : style.link_d}>
@@ -44,6 +46,7 @@ function AddressTransactionsTable({ rowData, data }) {
                   <Icon
                     className={lightTheme ? style.copy_l : style.copy_d}
                     icon="ic:outline-copy-all"
+                    onClick={() => copyText(el.from)}
                   />
                   <Link href={`/address/${el.from}`}>
                     <a className={lightTheme ? style.link_l : style.link_d}>
@@ -66,6 +69,7 @@ function AddressTransactionsTable({ rowData, data }) {
                   <Icon
                     className={lightTheme ? style.copy_l : style.copy_d}
                     icon="ic:outline-copy-all"
+                    onClick={() => copyText(el.to)}
                   />
                   <Link href={`/address/${el.to}`}>
                     <a className={lightTheme ? style.link_l : style.link_d}>

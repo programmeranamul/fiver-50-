@@ -5,7 +5,7 @@ import Search from "./../common/Search";
 import Link from "next/link";
 import { useRef, useState, useEffect } from "react";
 
-function AddressTokenCol() {
+function AddressTokenCol({title}) {
   const { theme, setTheme, my } = useTheme();
   const lightTheme = theme === "Light";
   const [showToken, setShowToken] = useState(false);
@@ -14,15 +14,9 @@ function AddressTokenCol() {
   
   useEffect(() => {
     const chechPopUp = (e) => {
-      if (showToken && ref.current && !ref?.current?.contains(e.target)) {
-      
-        console.log("1", showToken);
+      if (showToken && ref.current && !ref?.current?.contains(e.target)) {      
         setShowToken(false);
-        console.log("2", showToken);
-        console.log("firstfggh");
-      } else {
-        console.log("first");
-      }
+      } 
     };
     document.addEventListener("click", chechPopUp);
     return () => {
@@ -32,7 +26,7 @@ function AddressTokenCol() {
 
   return (
     <div className={`${lightTheme ? style.col_l : style.col_d} ${style.col}`}>
-      <p className={style.key}>Address</p>
+      <p className={style.key}>{title}</p>
       <div
         className={`${style.value} ${
           lightTheme ? style.token_value_l : style.token_value_d

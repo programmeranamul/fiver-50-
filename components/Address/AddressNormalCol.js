@@ -1,14 +1,14 @@
 import style from "../../styles/AddressInfo.module.css";
 import { useTheme } from "../../lib/ThemeContext";
 
-function AddressNormalCol() {
+function AddressNormalCol({title, value}) {
     const { theme, setTheme, my } = useTheme();
   const lightTheme = theme === "Light";
   return (
     <div className={`${lightTheme ? style.col_l : style.col_d} ${style.col}`}>
-    <p className={style.key}>Address</p>
+    <p className={style.key}>{title}</p>
     <p className={`${style.value} ${style.value_n}`}>
-      0
+      {value}
     </p>
   </div>
   )

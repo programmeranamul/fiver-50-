@@ -36,10 +36,7 @@ function AddressDataSection() {
           setActiveTab={setActiveTab}
           lists={tablists}
         />
-        {activeTab == 0 && (
-          <AddressTransactions
-          />
-        )}
+        {activeTab == 0 && ( <AddressTransactions /> )}
         {activeTab == 1 && <AddressStacking />}
         {activeTab == 2 && <AddressInternal />}
         {activeTab == 3 && <AddressHrc20/>}

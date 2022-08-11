@@ -58,8 +58,8 @@ function TxTransactionDetails() {
             link={`/block/${from}`}
             value={from}
           />
-          <TxCopyAndLinkCol title={" To"} link={`/block/${to}`} value={value} />
-          <TxCopyAndLinkCol title={"Value"} value={to} />
+          <TxCopyAndLinkCol title={" To"} link={`/block/${to}`} value={to} />
+          <TxCopyAndLinkCol title={"Value"} value={value} />
           <TxToken />
           <TxNormalCol title="Transaction Index" value={transactionFee} />
           <TxNormalCol title="Gas Limit & Usage by Txn" value={gasLimit} />

@@ -3,6 +3,7 @@ import { Icon } from "@iconify/react";
 import Link from "next/link";
 import { useTheme } from "../../lib/ThemeContext";
 import { TxTransitionLogsData } from "./../../data/TxTransitionLogsData";
+import { copyText } from './../../lib/CopyFunction';
 
 function TxTransitionLogs() {
   const { theme, setTheme, my } = useTheme();
@@ -23,8 +24,9 @@ function TxTransitionLogs() {
               <Icon
                 className={lightTheme ? style.copy_l : style.copy_d}
                 icon="ic:outline-copy-all"
+                onClick={() => copyText(data.address)}
               />
-              <Link href="/">
+              <Link href={`/address/${data.address}`}>
                 <a className={lightTheme ? style.link_l : style.link_d}>
                   {data.address}
                 </a>

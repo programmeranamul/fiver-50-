@@ -3,6 +3,7 @@ import { Icon } from "@iconify/react";
 import style from "../../styles/InternalTransactionsTable.module.css";
 import Link from "next/link";
 import { useTheme } from "../../lib/ThemeContext";
+import { copyText } from './../../lib/CopyFunction';
 
 function SingleTransctionCol({ data }) {
   const { theme, setTheme, my } = useTheme();
@@ -24,9 +25,10 @@ function SingleTransctionCol({ data }) {
             <Icon
               className={lightTheme ? style.copy_l : style.copy_d}
               icon="ic:outline-copy-all"
+              onClick={() => copyText(data.form)} 
             />
-          </span>{" "}
-          <Link href="/">
+          </span>
+          <Link href={`/address/${data.form}`}>
             <a>{data.form}</a>
           </Link>
         </td>
@@ -35,9 +37,10 @@ function SingleTransctionCol({ data }) {
             <Icon
               className={lightTheme ? style.copy_l : style.copy_d}
               icon="ic:outline-copy-all"
+              onClick={() => copyText(data.to)} 
             />{" "}
           </span>
-          <Link href="/">
+          <Link href={`/address/${data.to}`}>
             <a>{data.to}</a>
           </Link>
         </td>
@@ -51,7 +54,11 @@ function SingleTransctionCol({ data }) {
           } `}
         >
           <td className={style.m_td} colSpan={5}>
-            {data.nextRow ? data.nextRow : <Icon icon="ant-design:line-outlined" />}
+            {data.nextRow ? (
+              data.nextRow
+            ) : (
+              <Icon icon="ant-design:line-outlined" />
+            )}
           </td>
         </tr>
       ) : (

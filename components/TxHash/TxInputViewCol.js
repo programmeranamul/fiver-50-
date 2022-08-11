@@ -2,6 +2,7 @@ import style from "../../styles/TxTransactionDetails.module.css";
 import { Icon } from "@iconify/react";
 import { useTheme } from "../../lib/ThemeContext";
 import Link from "next/link";
+import { copyText } from './../../lib/CopyFunction';
 
 function TxInputViewCol() {
   const { theme, setTheme, my } = useTheme();
@@ -16,8 +17,8 @@ function TxInputViewCol() {
       </th>
       <td className="d-flex align-items-center">
         <span>
-          <Icon className={style.copy} icon="ic:outline-copy-all" />
-          <Link href="/">
+          <Icon className={style.copy} icon="ic:outline-copy-all" onClick={() => copyText(hash)}/>
+          <Link href={`/tx/${hash}`}>
           <a>{hash.slice(0,60)}...</a>
           </Link>
         </span>        
