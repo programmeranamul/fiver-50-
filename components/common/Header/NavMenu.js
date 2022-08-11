@@ -1,22 +1,21 @@
 import style from "../../../styles/Header.module.css";
-import Setting from './Setting';
-import Tools from './Tools';
-import Token from './Token';
-import AddressFormat from './AddressFormat';
+import Setting from "./Setting";
+import Tools from "./Tools";
+import Token from "./Token";
+import AddressFormat from "./AddressFormat";
 import { useTheme } from "../../../lib/ThemeContext";
 
 function NavMenu() {
-
   return (
     <div className={`d-flex align-items-center ${style.right_area}`}>
-    <AddressFormat />
-    <div className="d-flex">
-      <Token />
-      <Tools />
-      <Setting />
+      <AddressFormat />
+      <div className="d-flex">
+        <Token />
+        <Tools />
+        <Setting />
+      </div>
     </div>
-  </div>
-  )
+  );
 }
 
-export default NavMenu
+export default NavMenu;

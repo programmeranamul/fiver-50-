@@ -78,7 +78,7 @@ function TransctionPageTable({ datas }) {
                   </span>
                   <Link href={`/address/${data.to}`}>
                     <a>
-                      <span>{data.to}</span> 
+                      <span>{data.to}</span>
                     </a>
                   </Link>
                 </div>

@@ -2,7 +2,7 @@ import { Icon } from "@iconify/react";
 import { useTheme } from "../../lib/ThemeContext";
 import style from "../../styles/BlockHash.module.css";
 import Link from "next/link";
-import { copyText } from './../../lib/CopyFunction';
+import { copyText } from "./../../lib/CopyFunction";
 
 // ant-design:arrow-left-outlined
 
@@ -26,12 +26,12 @@ function BlockHashTableHashCol({ value, title }) {
           <a>{value}</a>
         </Link>
         <div className={style.icon_w}>
-          <Link href={`/block/${value-1}`}>
+          <Link href={`/block/${value - 1}`}>
             <a>
               <Icon icon="ant-design:arrow-left-outlined" />
             </a>
           </Link>
-          <Link href={`/block/${value-1}`}>
+          <Link href={`/block/${value - 1}`}>
             <a>
               <Icon icon="ant-design:arrow-right-outlined" />
             </a>

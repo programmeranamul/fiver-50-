@@ -4,14 +4,14 @@ import { useState } from "react";
 import MyDropDown from "./../MyDropDown";
 import Link from "next/link";
 import { useTheme } from "../../../lib/ThemeContext";
-import {useEffect, useRef} from "react"
+import { useEffect, useRef } from "react";
 
 function Token() {
   const [open, setOpen] = useState(false);
   const { theme, setTheme, my } = useTheme();
   const lightTheme = theme == "Light";
 
-  const ref= useRef()
+  const ref = useRef();
 
   const handelDropDown = () => {
     setOpen(!open);
@@ -19,9 +19,9 @@ function Token() {
 
   useEffect(() => {
     const chechPopUp = (e) => {
-      if (open && ref.current && !ref?.current?.contains(e.target)) {      
+      if (open && ref.current && !ref?.current?.contains(e.target)) {
         setOpen(false);
-      } 
+      }
     };
     document.addEventListener("click", chechPopUp);
     return () => {

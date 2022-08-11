@@ -10,9 +10,9 @@ function MyApp({ Component, pageProps }) {
     document.body.className = "light-theme";
   }, []);
   return (
-    <ThemeProvider >
+    <ThemeProvider>
       <Header />
-      <Search className="container"/>
+      <Search className="container" />
       <Component {...pageProps} />
       <Footer />
     </ThemeProvider>

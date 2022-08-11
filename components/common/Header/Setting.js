@@ -2,20 +2,19 @@ import { Icon } from "@iconify/react";
 import style from "../../../styles/Setting.module.css";
 import MyDropDown from "./../MyDropDown";
 import { useState, useEffect, useRef } from "react";
-import { useTheme } from './../../../lib/ThemeContext';
+import { useTheme } from "./../../../lib/ThemeContext";
 
 function Setting() {
   const [open, setOpen] = useState(false);
-  const { theme, setTheme, my } = useTheme()
-  const lighTheme = theme === "Light"
-
+  const { theme, setTheme, my } = useTheme();
+  const lighTheme = theme === "Light";
 
   const [choosedTheme, setChoosedTheme] = useState(theme);
   const [timeFormet, setTimeFormet] = useState("Exact");
 
   useEffect(() => {
-    setChoosedTheme(theme)
-  }, [theme])
+    setChoosedTheme(theme);
+  }, [theme]);
 
   useEffect(() => {
     if (choosedTheme !== "Light") {
@@ -25,35 +24,31 @@ function Setting() {
     document.body.className = "light-theme";
   }, [choosedTheme]);
 
-
   const handelThemeChange = (thm) => {
     setChoosedTheme(thm);
     localStorage.setItem("theme", JSON.stringify(thm));
-    my(thm)
+    my(thm);
   };
-
 
   // dropdown function
 
-  const ref = useRef()
+  const ref = useRef();
 
   const handelDropDown = () => {
     setOpen(!open);
   };
 
-
   useEffect(() => {
     const chechPopUp = (e) => {
-      if (open && ref.current && !ref?.current?.contains(e.target)) {      
+      if (open && ref.current && !ref?.current?.contains(e.target)) {
         setOpen(false);
-      } 
+      }
     };
     document.addEventListener("click", chechPopUp);
     return () => {
       document.removeEventListener("click", chechPopUp);
     };
   }, [open]);
-
 
   return (
     <div className="position-relative" ref={ref}>
@@ -65,15 +60,23 @@ function Setting() {
       <MyDropDown open={open}>
         <div className="mb-3">
           <h4 className={style.title}>Theme</h4>
-          <div className={`${lighTheme? style.switcher_l : style.switcher_d } ${style.switcher}`}>
+          <div
+            className={`${lighTheme ? style.switcher_l : style.switcher_d} ${
+              style.switcher
+            }`}
+          >
             <div
-              className={`${style.side_btn} ${lighTheme? style.btn_a : style.btn_in_a}`}
+              className={`${style.side_btn} ${
+                lighTheme ? style.btn_a : style.btn_in_a
+              }`}
               onClick={() => handelThemeChange("Light")}
             >
               Light
             </div>
-            <div             
-              className={`${style.side_btn} ${!lighTheme? style.btn_a : style.btn_in_a}`}
+            <div
+              className={`${style.side_btn} ${
+                !lighTheme ? style.btn_a : style.btn_in_a
+              }`}
               onClick={() => handelThemeChange("Dark")}
             >
               Dark
@@ -84,15 +87,23 @@ function Setting() {
         {/* swith time fromet */}
         <div className="mb-3">
           <h4 className={style.title}>Date Format</h4>
-          <div className={`${lighTheme? style.switcher_l : style.switcher_d } ${style.switcher}`}>
+          <div
+            className={`${lighTheme ? style.switcher_l : style.switcher_d} ${
+              style.switcher
+            }`}
+          >
             <div
-              className={`${style.side_btn} ${timeFormet === "Exact"? style.btn_a : style.btn_in_a}`}
+              className={`${style.side_btn} ${
+                timeFormet === "Exact" ? style.btn_a : style.btn_in_a
+              }`}
               onClick={() => setTimeFormet("Exact")}
             >
               Exact
             </div>
             <div
-              className={`${style.side_btn} ${timeFormet !== "Exact"? style.btn_a : style.btn_in_a}`}
+              className={`${style.side_btn} ${
+                timeFormet !== "Exact" ? style.btn_a : style.btn_in_a
+              }`}
               onClick={() => setTimeFormet("Relative")}
             >
               Relative

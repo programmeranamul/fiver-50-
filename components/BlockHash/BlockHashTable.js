@@ -15,7 +15,7 @@ function BlockHashTable() {
         style.wrapper
       }`}
     >
-      <BlockHashTableAllView showMore={showMore}/>
+      <BlockHashTableAllView showMore={showMore} />
       <button
         className={`${style.btn} ${lightTheme ? style.btn_l : style.btn_d}`}
         onClick={() => setShowMore(!showMore)}

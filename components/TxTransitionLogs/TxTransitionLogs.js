@@ -3,7 +3,7 @@ import { Icon } from "@iconify/react";
 import Link from "next/link";
 import { useTheme } from "../../lib/ThemeContext";
 import { TxTransitionLogsData } from "./../../data/TxTransitionLogsData";
-import { copyText } from './../../lib/CopyFunction';
+import { copyText } from "./../../lib/CopyFunction";
 
 function TxTransitionLogs() {
   const { theme, setTheme, my } = useTheme();
@@ -54,9 +54,7 @@ function TxTransitionLogs() {
                   lightTheme ? style.link_l : style.link_d
                 }`}
               >
-               {
-                data.data
-               }
+                {data.data}
               </p>
             </div>
           </div>

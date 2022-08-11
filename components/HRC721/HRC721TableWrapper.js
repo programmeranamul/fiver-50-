@@ -1,4 +1,4 @@
-import {useState, useEffect} from "react";
+import { useState, useEffect } from "react";
 import Search from "./../common/Search";
 import TableHeader from "./../common/Table/TableHeader";
 import TableFooter from "./../common/Table/TableFooter";
@@ -17,9 +17,9 @@ function HRC721TableWrapper() {
       className={`white-blue-bg table-block-wrapper lightgray-to-light-blue`}
     >
       <Search />
-      <TableHeader dataPerRow={dataPerRow}/>
+      <TableHeader dataPerRow={dataPerRow} />
       <Hrc721DataTable data={data} />
-      <TableFooter dataPerRow={data} setDataPerRow={setDataPerRow}/>
+      <TableFooter dataPerRow={data} setDataPerRow={setDataPerRow} />
     </div>
   );
 }

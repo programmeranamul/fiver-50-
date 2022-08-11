@@ -27,7 +27,11 @@ function AddressHrc20() {
             <div></div>
             <TablePagination />
           </div>
-          <AddressNftTransfareTable data={data} rowData={AddressHrc20DataRow} hideTokeId = {true}/>
+          <AddressNftTransfareTable
+            data={data}
+            rowData={AddressHrc20DataRow}
+            hideTokeId={true}
+          />
           <TableFooter dataPerRow={dataPerRow} setDataPerRow={setDataPerRow} />
         </>
       )}

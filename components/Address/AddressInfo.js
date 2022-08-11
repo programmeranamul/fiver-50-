@@ -27,7 +27,7 @@ function AddressInfo() {
         <AddressNormalCol title="Staked" value={staked} />
         <AddressBlanceCol title="Banlce" value={balance} />
 
-        <AddressTokenCol title="Token"/>
+        <AddressTokenCol title="Token" />
       </div>
     </article>
   );

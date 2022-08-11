@@ -1,7 +1,4 @@
-import React from "react";
 import AddressInfo from "./../../components/Address/AddressInfo";
-import AddressTransactions from "./../../components/Address/AddressTransactions";
-import TxHashTab from "./../../components/TxHash/TxHashTab";
 import AddressDataSection from "./../../components/Address/AddressDataSection";
 
 function Address() {

@@ -3,15 +3,15 @@ import { HrcDataTableRowData } from "./../../data/HrcDataTableData";
 import { Icon } from "@iconify/react";
 import { useTheme } from "../../lib/ThemeContext";
 import Link from "next/link";
-import copy from 'copy-text-to-clipboard';
-import { copyText } from './../../lib/CopyFunction';
+import copy from "copy-text-to-clipboard";
+import { copyText } from "./../../lib/CopyFunction";
 
 function HrcDataTable({ data }) {
   const { theme, setTheme, my } = useTheme();
 
   const handelCopy = (text) => {
-    copy(text)
-  }
+    copy(text);
+  };
 
   return (
     <div className={style.wrapper}>
@@ -58,14 +58,19 @@ function HrcDataTable({ data }) {
                   } ${style.address}`}
                 >
                   <span onClick={() => handelCopy(el.address)}>
-                    <Icon icon="ic:outline-copy-all" onClick={() => copyText(el.address)}/>
+                    <Icon
+                      icon="ic:outline-copy-all"
+                      onClick={() => copyText(el.address)}
+                    />
                   </span>
-                  <Link
-                    href={`/address/${el.address}`}                   
-                  >
-                    <a  className={
-                      theme === "Light" ? style.address_l : style.address_d
-                    }>{el.address}</a>
+                  <Link href={`/address/${el.address}`}>
+                    <a
+                      className={
+                        theme === "Light" ? style.address_l : style.address_d
+                      }
+                    >
+                      {el.address}
+                    </a>
                   </Link>
                 </div>
               </td>

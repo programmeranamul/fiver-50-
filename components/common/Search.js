@@ -2,7 +2,7 @@ import { Icon } from "@iconify/react";
 import { useTheme } from "../../lib/ThemeContext";
 import style from "../../styles/Search.module.css";
 
-function Search({className}) {
+function Search({ className }) {
   const { theme, setTheme, my } = useTheme();
   return (
     <section className={className}>
@@ -13,7 +13,10 @@ function Search({className}) {
           } ${theme === "Light" ? style.my_group_l : style.my_group_d}`}
           id="basic-addon1"
         >
-          <Icon icon="bi:search" className={theme ==="Light" ? style.icon_l: style.icon_d} />
+          <Icon
+            icon="bi:search"
+            className={theme === "Light" ? style.icon_l : style.icon_d}
+          />
         </span>
         <input
           type="text"

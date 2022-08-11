@@ -34,7 +34,9 @@ function BlockDataTable({ tableRow, tableData }) {
                     lightTheme ? style.sh_l : style.sh_d
                   }`}
                 >
-                  <Link href={`/block/${data.link}`}><a >{data?.height}</a></Link>
+                  <Link href={`/block/${data.link}`}>
+                    <a>{data?.height}</a>
+                  </Link>
                 </td>
                 <td
                   className={`${lightTheme ? style.td_l : style.td_d} ${

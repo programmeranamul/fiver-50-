@@ -1,12 +1,12 @@
-import React from 'react'
-import TokenApprovals from './../../components/TokenApprovals/TokenApprovals';
+import React from "react";
+import TokenApprovals from "./../../components/TokenApprovals/TokenApprovals";
 
 function approvals() {
   return (
-  <>
-  <TokenApprovals />
-  </>
-  )
+    <>
+      <TokenApprovals />
+    </>
+  );
 }
 
-export default approvals
+export default approvals;

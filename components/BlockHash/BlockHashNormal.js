@@ -1,14 +1,13 @@
 import { Icon } from "@iconify/react";
 
-function BlockHashNormal({title, value}) {
-  console.log("first", value)
+function BlockHashNormal({ title, value }) {
+  console.log("first", value);
   return (
-    <tr
-    >
+    <tr>
       <th>
         <Icon icon="ant-design:question-circle-outlined" /> <span>{title}</span>
       </th>
-      <td>{value !==""  ? value : <Icon icon="bi:dash-lg" />}</td>
+      <td>{value !== "" ? value : <Icon icon="bi:dash-lg" />}</td>
     </tr>
   );
 }

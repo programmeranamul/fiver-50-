@@ -67,7 +67,7 @@ function TxTransactionDetails() {
           <TxNormalCol title="Nonce" value={transactionFee} />
           <TxNormalCol title="Transaction Index" value={transactionIndex} />
           <TxInputViewCol />
-          {showMore && <TxHasHHodden r={r} s={s} v={v}/>}
+          {showMore && <TxHasHHodden r={r} s={s} v={v} />}
         </tbody>
       </table>
       <ShowMoreBtn showMore={showMore} setShowMore={setShowMore} />

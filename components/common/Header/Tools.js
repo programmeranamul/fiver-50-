@@ -3,11 +3,11 @@ import style from "../../../styles/Header.module.css";
 import { useState } from "react";
 import MyDropDown from "./../MyDropDown";
 import Link from "next/link";
-import {useEffect, useRef} from "react"
+import { useEffect, useRef } from "react";
 
 function Tools() {
   const [open, setOpen] = useState(false);
-  const ref =  useRef()
+  const ref = useRef();
 
   const handelDropDown = () => {
     setOpen(!open);
@@ -15,16 +15,15 @@ function Tools() {
 
   useEffect(() => {
     const chechPopUp = (e) => {
-      if (open && ref.current && !ref?.current?.contains(e.target)) {      
+      if (open && ref.current && !ref?.current?.contains(e.target)) {
         setOpen(false);
-      } 
+      }
     };
     document.addEventListener("click", chechPopUp);
     return () => {
       document.removeEventListener("click", chechPopUp);
     };
   }, [open]);
-
 
   const links = [
     {

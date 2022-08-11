@@ -4,7 +4,7 @@ import style from "../../styles/HrcDataTable.module.css";
 import { Hrc1155DataRow } from "./../../data/Hrc1155DataTableData";
 import Image from "next/image";
 import Link from "next/link";
-import { copyText } from './../../lib/CopyFunction';
+import { copyText } from "./../../lib/CopyFunction";
 
 function Hrc1155DataTable({ data }) {
   const { theme, setTheme, my } = useTheme();

@@ -1,12 +1,11 @@
-
-import CheckHRC from './../../components/CheckHRC/CheckHRC';
+import CheckHRC from "./../../components/CheckHRC/CheckHRC";
 
 function checkHrc() {
   return (
     <>
-    <CheckHRC />
+      <CheckHRC />
     </>
-  )
+  );
 }
 
-export default checkHrc
+export default checkHrc;

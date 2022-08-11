@@ -11,9 +11,7 @@ function BlockFilter({ filtersList }) {
   const router = useRouter();
 
   const handelChange = (e) => {
-    // const id = e.target.value.slice(-1);
     router.push(e.target.value);
-    // console.log(e.target.value)
   };
 
   return (
@@ -38,7 +36,7 @@ function BlockFilter({ filtersList }) {
             ))}
           </select>
         </div>
-      </div>     
+      </div>
     </article>
   );
 }

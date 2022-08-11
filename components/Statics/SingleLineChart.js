@@ -1,4 +1,3 @@
-
 import "chartjs-adapter-moment";
 import {
   Chart as ChartJS,
@@ -6,7 +5,8 @@ import {
   LinearScale,
   PointElement,
   LineElement,
-  Title,TimeScale,
+  Title,
+  TimeScale,
   Tooltip,
   Legend,
 } from "chart.js";
@@ -15,7 +15,8 @@ ChartJS.register(
   CategoryScale,
   LinearScale,
   PointElement,
-  LineElement,TimeScale,
+  LineElement,
+  TimeScale,
   Title,
   Tooltip,
   Legend
@@ -23,11 +24,8 @@ ChartJS.register(
 import style from "../../styles/Statics.module.css";
 import { useTheme } from "../../lib/ThemeContext";
 
-
-
 function SingleLineChart({ mydata, title }) {
-
-  const { theme, setTheme, my } = useTheme()
+  const { theme, setTheme, my } = useTheme();
   const lightTheme = theme == "Light";
 
   const data = {
@@ -36,8 +34,8 @@ function SingleLineChart({ mydata, title }) {
         data: mydata,
         tension: 0.4,
         segment: {
-          borderColor:lightTheme? undefined : "#69F9BD"
-        }
+          borderColor: lightTheme ? undefined : "#69F9BD",
+        },
       },
     ],
   };
@@ -51,12 +49,13 @@ function SingleLineChart({ mydata, title }) {
       title: {
         display: true,
         text: title,
+        color: lightTheme ? undefined : "#5F98C7",
       },
     },
     scales: {
       x: {
         type: "time",
-        ticks: { maxTicksLimit: 3, color: lightTheme? undefined : "#fff"},
+        ticks: { maxTicksLimit: 3, color: lightTheme ? undefined : "#fff" },
         time: {
           unit: "day",
         },
@@ -66,7 +65,7 @@ function SingleLineChart({ mydata, title }) {
         },
       },
       y: {
-        ticks: {color: lightTheme? undefined : "#fff"},
+        ticks: { color: lightTheme ? undefined : "#fff" },
         grid: {
           display: false,
           borderWidth: 0,

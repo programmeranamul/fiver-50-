@@ -7,7 +7,11 @@ function Header() {
   const { theme, setTheme, my } = useTheme();
 
   return (
-    <header className={`${theme==="Light" ? style.header_l : style.header_d} ${style.header}`}>
+    <header
+      className={`${theme === "Light" ? style.header_l : style.header_d} ${
+        style.header
+      }`}
+    >
       <div className="container">
         <nav className={`d-flex justify-content-between align-items-center`}>
           <Logo />

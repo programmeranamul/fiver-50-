@@ -3,7 +3,7 @@ import { Icon } from "@iconify/react";
 import style from "../../styles/HrcDataTable.module.css";
 import { Hrc721DataTableRow } from "./../../data/Hrc721DataTableData";
 import Link from "next/link";
-import { copyText } from './../../lib/CopyFunction';
+import { copyText } from "./../../lib/CopyFunction";
 
 function Hrc721DataTable({ data }) {
   const { theme, setTheme, my } = useTheme();
@@ -52,7 +52,10 @@ function Hrc721DataTable({ data }) {
                   } ${style.address}`}
                 >
                   <span>
-                    <Icon icon="ic:outline-copy-all" onClick={() => copyText(el.address)}/>
+                    <Icon
+                      icon="ic:outline-copy-all"
+                      onClick={() => copyText(el.address)}
+                    />
                   </span>
                   <Link href={`/address/${el.address}`}>
                     <a

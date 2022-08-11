@@ -36,7 +36,9 @@ function CheckHRC() {
                 <label htmlFor="type" className="form-label my-input-label">
                   Contract type
                 </label>
-                <select className={`form-select my-input my-select ${style.select}`}>
+                <select
+                  className={`form-select my-input my-select ${style.select}`}
+                >
                   <option>ERC20</option>
                   <option>ERC721</option>
                   <option>ERC1155</option>

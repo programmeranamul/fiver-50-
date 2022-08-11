@@ -3,7 +3,7 @@ import { Icon } from "@iconify/react";
 import { useTheme } from "../../lib/ThemeContext";
 import Link from "next/link";
 
-function TxNormalCol({title, value}) {
+function TxNormalCol({ title, value }) {
   const { theme, setTheme, my } = useTheme();
   const lightTheme = theme === "Light";
   return (

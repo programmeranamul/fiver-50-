@@ -5,11 +5,11 @@ function RecordsPerPage({ dataPerRow, setDataPerRow }) {
   const { theme, setTheme, my } = useTheme();
 
   const handelSelected = (e) => {
-    setDataPerRow(e.target.value)
+    setDataPerRow(e.target.value);
   };
 
   return (
-    <> 
+    <>
       <div>
         <select
           onChange={handelSelected}

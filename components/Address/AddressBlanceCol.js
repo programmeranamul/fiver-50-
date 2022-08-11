@@ -1,7 +1,7 @@
 import style from "../../styles/AddressInfo.module.css";
 import { useTheme } from "../../lib/ThemeContext";
 
-function AddressBlanceCol({title,value}) {
+function AddressBlanceCol({ title, value }) {
   const { theme, setTheme, my } = useTheme();
   const lightTheme = theme === "Light";
   return (
@@ -13,10 +13,11 @@ function AddressBlanceCol({title,value}) {
             style.my_select
           } form-select`}
         >
-          {
-            value.map(el => <option key={el} value={el}>{el}</option> )
-          }
-         
+          {value.map((el) => (
+            <option key={el} value={el}>
+              {el}
+            </option>
+          ))}
         </select>
       </div>
     </div>

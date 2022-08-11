@@ -5,18 +5,18 @@ import Search from "./../common/Search";
 import Link from "next/link";
 import { useRef, useState, useEffect } from "react";
 
-function AddressTokenCol({title}) {
+function AddressTokenCol({ title }) {
   const { theme, setTheme, my } = useTheme();
   const lightTheme = theme === "Light";
   const [showToken, setShowToken] = useState(false);
 
   const ref = useRef();
-  
+
   useEffect(() => {
     const chechPopUp = (e) => {
-      if (showToken && ref.current && !ref?.current?.contains(e.target)) {      
+      if (showToken && ref.current && !ref?.current?.contains(e.target)) {
         setShowToken(false);
-      } 
+      }
     };
     document.addEventListener("click", chechPopUp);
     return () => {

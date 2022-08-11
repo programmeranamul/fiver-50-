@@ -2,7 +2,7 @@ import style from "../../styles/TxTransactionDetails.module.css";
 import { Icon } from "@iconify/react";
 import { useTheme } from "../../lib/ThemeContext";
 import Link from "next/link";
-import { copyText } from './../../lib/CopyFunction';
+import { copyText } from "./../../lib/CopyFunction";
 
 function TxCopyAndLinkCol({ link, value, title }) {
   const { theme, setTheme, my } = useTheme();
@@ -14,7 +14,11 @@ function TxCopyAndLinkCol({ link, value, title }) {
       </th>
       <td className="d-flex align-items-center">
         <span>
-          <Icon className={style.copy} icon="ic:outline-copy-all" onClick={() => copyText(value)}/>
+          <Icon
+            className={style.copy}
+            icon="ic:outline-copy-all"
+            onClick={() => copyText(value)}
+          />
         </span>
         {link ? (
           <Link
