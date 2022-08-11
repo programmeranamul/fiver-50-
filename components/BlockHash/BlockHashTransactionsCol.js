@@ -2,6 +2,7 @@ import { Icon } from "@iconify/react";
 import { useTheme } from "../../lib/ThemeContext";
 import style from "../../styles/BlockHash.module.css";
 import Link from "next/link";
+import { copyText } from './../../lib/CopyFunction';
 
 function BlockHashTransactionsCol({ title, links }) {
   const { theme, setTheme, my } = useTheme();
@@ -17,9 +18,9 @@ function BlockHashTransactionsCol({ title, links }) {
           <div key={index} className="d-flex align-items-center">
             <Icon
               className={lightTheme ? style.copy_l : style.copy_d}
-              icon="ic:outline-copy-all"
+              icon="ic:outline-copy-all" onClick={() => copyText(link)}
             />
-            <Link href={"/block/"+link}>
+            <Link href={"/tx/"+link}>
               <a className={lightTheme ? style.copy_l : style.copy_d}>
                 {link}
               </a>

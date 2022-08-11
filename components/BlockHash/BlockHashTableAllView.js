@@ -53,8 +53,9 @@ function BlockHashTableAllView({ showMore }) {
             value={Hash}
             link={`/block/${Hash}`}
           />
+           <BlockHashCopyNormal title="Timestamp" value={time_Stamp} />
           <BlockHashTransactionsCol title="Transactions" links={transactions} />
-          <BlockHashCopyNormal title="Timestamp" value={time_Stamp} />
+         
           <BlockHashNormal
             title="Staking Transactions"
             value={staking_Transactions}
