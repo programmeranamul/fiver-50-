@@ -21,16 +21,23 @@ ChartJS.register(
   Legend
 );
 import style from "../../styles/Statics.module.css";
+import { useTheme } from "../../lib/ThemeContext";
 
 
 
 function SingleLineChart({ mydata, title }) {
+
+  const { theme, setTheme, my } = useTheme()
+  const lightTheme = theme == "Light";
+
   const data = {
     datasets: [
       {
         data: mydata,
         tension: 0.4,
-        // pointRadius: 0,
+        segment: {
+          borderColor:lightTheme? undefined : "#69F9BD"
+        }
       },
     ],
   };
@@ -49,7 +56,7 @@ function SingleLineChart({ mydata, title }) {
     scales: {
       x: {
         type: "time",
-        ticks: { maxTicksLimit: 3 },
+        ticks: { maxTicksLimit: 3, color: lightTheme? undefined : "#fff"},
         time: {
           unit: "day",
         },
@@ -59,7 +66,7 @@ function SingleLineChart({ mydata, title }) {
         },
       },
       y: {
-        ticks: {},
+        ticks: {color: lightTheme? undefined : "#fff"},
         grid: {
           display: false,
           borderWidth: 0,
