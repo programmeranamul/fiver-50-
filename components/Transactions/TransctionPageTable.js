@@ -81,7 +81,29 @@ function TransctionPageTable({ datas }) {
                       <span>{data.to}</span>
                     </a>
                   </Link>
-                </div>
+                </div>                
+              </td>
+              {/* <td  className={`${lightTheme ? style.i_l : style.i_d} `}>
+                {data.oneValue}
+              </td>
+              <td className={``}>
+               <div>
+               {data.timeStamp}
+               </div>
+              </td> */}
+               <td>
+                <div className={style.td}>
+                  <span>
+                  {data.oneValue}
+                  </span>                 
+                </div>                
+              </td>
+               <td>
+                <div className={style.td}>
+                  <span className={lightTheme? style.time_l : style.time_d}>
+                  {data.timeStamp}
+                  </span>                 
+                </div>                
               </td>
             </tr>
           ))}

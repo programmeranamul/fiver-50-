@@ -3,23 +3,23 @@ import style from "../../styles/Footer.module.css";
 
 const links = [
   {
-    link: "https://www.fiverr.com/share/pBKL7E",
+    link: "https://harmony.one/team",
     icon: "el:group",
   },
   {
-    link: "https://www.fiverr.com/share/pBKL7E",
+    link: "https://harmony.one/discord",
     icon: "bxl:discord-alt",
   },
   {
-    link: "https://www.fiverr.com/share/pBKL7E",
+    link: "https://medium.com/harmony-one",
     icon: "akar-icons:medium-fill",
   },
   {
-    link: "https://www.fiverr.com/share/pBKL7E",
+    link: "https://t.me/harmony_one",
     icon: "cib:telegram",
   },
   {
-    link: "https://www.fiverr.com/share/pBKL7E",
+    link: "https://twitter.com/harmonyprotocol",
     icon: "ant-design:twitter-outlined",
   },
 ];

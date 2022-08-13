@@ -48,6 +48,7 @@ function BlockPageDataTableMain({ datas }) {
                 </div>
               </td>
               <td className={style.td}>{data.Transactions}</td>
+              <td className={style.td}>{data.gasUser} / {data.gasLimit}</td>
             </tr>
           ))}
         </tbody>
