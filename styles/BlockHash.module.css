@@ -130,6 +130,25 @@
   transform: rotate(180deg);
 }
 
+.my_select {
+  background-color: transparent !important;
+  border-radius: 4px;
+}
+.my_select:focus {
+  box-shadow: none;
+}
+.my_select_l {
+  border: 1px solid rgb(231, 236, 247) !important;
+  color: rgb(85, 98, 109);
+}
+.my_select_d {
+  border: 1px solid rgb(55, 88, 115) !important;
+  color: #fff;
+}
+.my_select_d .my_op {
+  background-color: rgb(27, 41, 94);
+}
+
 @media (max-width: 991.98px) {
   .tbody td {
     width: 80%;
@@ -139,6 +158,8 @@
   }
 }
 
-@media (max-width: 767.98px) { .wrapper {
-  padding: 12px;
-} }
+@media (max-width: 767.98px) {
+  .wrapper {
+    padding: 12px;
+  }
+}

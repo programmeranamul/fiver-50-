@@ -7,6 +7,7 @@ import BlockHashCopyNormal from "./BlockHashCopyNormal";
 import BlockHasNormalCopyWithLink from "./BlockHasNormalCopyWithLink";
 import BlockHashTransactionsCol from "./BlockHashTransactionsCol";
 import BlockHashHideOptions from "./BlockHashHideOptions";
+import BlockHashShard from './BlockHashShard';
 
 function BlockHashTableAllView({ showMore }) {
   const { theme, setTheme, my } = useTheme();
@@ -51,7 +52,8 @@ function BlockHashTableAllView({ showMore }) {
             title="Height"
             tooltip="Also knows as Block Number"
           />
-          <BlockHashNormal title="Shard" value={shard} tooltip="Shard Number" />
+          {/* <BlockHashNormal title="Shard" value={shard} tooltip="Shard Number" /> */}
+          <BlockHashShard title="Shard" value={shard} tooltip="Shard Number"/>
           <BlockHasNormalCopyWithLink
             title="Hash"
             value={Hash}

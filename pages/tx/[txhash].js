@@ -14,8 +14,8 @@ function TxHash() {
 
   const tablists = [
     "Transaction Details",
-    "Internal Transactions (95)",
-    "Logs (56)",
+    "Internal Transactions",
+    "Logs",
   ];
 
 
@@ -32,9 +32,9 @@ function TxHash() {
         >
           <TxHashTab activeTab={activeTab} setActiveTab={setActiveTab} lists={tablists} />
           <div>
-            {activeTab === 0 && <TxTransactionDetails />}
-            {activeTab === 1 && <InternalTransactions />}
-            {activeTab === 2 && <TxTransitionLogs />}
+            {activeTab === "Transaction Details" && <TxTransactionDetails />}
+            {activeTab === "Internal Transactions" && <InternalTransactions />}
+            {activeTab === "Logs" && <TxTransitionLogs />}
             
           </div>
         </article>

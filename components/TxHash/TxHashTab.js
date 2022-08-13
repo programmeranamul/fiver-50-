@@ -16,7 +16,7 @@ function TxHashTab({ activeTab, setActiveTab, lists }) {
             list === activeTab ? style.tab_active : style.tab_inactive
           } ${style.tab} ${lightTheme ? style.tab_l : style.tab_d}`}
         >
-          <p className="mb-0">{list}</p>
+          <p className="mb-0 fs-14">{list}</p>
         </div>
       ))}
     </div>

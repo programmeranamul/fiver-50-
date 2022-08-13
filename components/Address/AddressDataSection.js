@@ -26,6 +26,8 @@ function AddressDataSection() {
     "HRC20 Transfers",
     "NFT Transfers",
     "Holders",
+    "Contract",
+    "Tools"
   ];
 
   return (
@@ -40,14 +42,15 @@ function AddressDataSection() {
           setActiveTab={setActiveTab}
           lists={tablists}
         />
-        {/* {activeTab == "Transactions" && <AddressTransactions />} */}
-        {/* {activeTab == "Staking" && <AddressStacking />}
+        {activeTab == "Transactions" && <AddressTransactions />}
+        {activeTab == "Staking" && <AddressStacking />}
         {activeTab == "Internal" && <AddressInternal />}
         {activeTab == "HRC20 Transfers" && <AddressHrc20 />}
-        {activeTab == "NFT Transfers" && <AddressNftTransfare />} */}
-        {/* <AddressHolders /> */}
-        {/* <AddressContract /> */}
-        <AddressTool />
+        {activeTab == "NFT Transfers" && <AddressNftTransfare />}
+        {activeTab == "Holders" && <AddressHolders />}
+        {activeTab == "Contract" && <AddressContract />}
+        {activeTab == "Tools" && <AddressTool />}
+        
       </div>
     </article>
   );
