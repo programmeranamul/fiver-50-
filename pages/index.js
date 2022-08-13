@@ -15,7 +15,7 @@ function Index() {
           <Transactions />
         </div>
       </div>     
-    {/* <MyToolTip><button>Hover me !</button></MyToolTip> */}
+
     </>
   );
 }

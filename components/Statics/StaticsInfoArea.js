@@ -17,7 +17,8 @@ function StaticsInfoArea() {
           mainText="ONE PRICE"
           subText="$ 0.0222"
           des=" (-2.713%)"
-          icon="fa:group"
+          icon="prime:chart-line"
+          // icon="fa:line-chart"
         />
         <div className={style.line}></div>
         <div className={style.line_1}></div>
@@ -25,7 +26,7 @@ function StaticsInfoArea() {
         <StaticsContent
           mainText="TRANSACTION VOLUME"
           subText="754,125,091"
-          icon="fa:group"
+          icon="ri:arrow-left-right-line"
         />
       </div>
       <div
@@ -33,7 +34,7 @@ function StaticsInfoArea() {
           lightTheme ? style.c_s_l : style.c_s_d
         }`}
       >
-        <StaticsContent mainText="SHARD COUNT" subText="4" icon="fa:group" />
+        <StaticsContent mainText="SHARD COUNT" subText="4" icon="fa:cubes" />
         <div className={style.line}></div>
         <div
           className={`${lightTheme ? style.l_1_l : style.l_1_d} ${
@@ -45,6 +46,7 @@ function StaticsInfoArea() {
           mainText="BLOCK LATENCY"
           subText="2.06s"
           icon="fa:group"
+          popup={true}
         />
       </div>
     </article>
