@@ -46,26 +46,41 @@ function BlockHashTableAllView({ showMore }) {
             style.tbody
           }`}
         >
-          <BlockHashTableHashCol value={height} title="Height" />
-          <BlockHashNormal title="Shard" value={shard} />
+          <BlockHashTableHashCol
+            value={height}
+            title="Height"
+            tooltip="Also knows as Block Number"
+          />
+          <BlockHashNormal title="Shard" value={shard} tooltip="Shard Number" />
           <BlockHasNormalCopyWithLink
             title="Hash"
             value={Hash}
             link={`/block/${Hash}`}
+            tooltip="The Hash of the block header of the current block"
           />
-          <BlockHashCopyNormal title="Timestamp" value={time_Stamp} />
-          <BlockHashTransactionsCol title="Transactions" links={transactions} />
+          <BlockHashCopyNormal
+            title="Timestamp"
+            value={time_Stamp}
+            tooltip="The date and time at which a block is mined"
+          />
+          <BlockHashTransactionsCol
+            tooltip="The number of transacitions in the block"
+            title="Transactions"
+            links={transactions}
+          />
 
           <BlockHashNormal
             title="Staking Transactions"
             value={staking_Transactions}
+            tooltip="The number of staking transactions in the block"
           />
           <BlockHasNormalCopyWithLink
             title="Proposer"
             value={proposer}
             link={`/address/${proposer}`}
+            tooltip="Miner who successfully include the block into the blockchain"
           />
-          <BlockHashCopyNormal title=" Gas Limit" value={gasLimit} />
+          <BlockHashCopyNormal title=" Gas Limit" value={gasLimit} tooltip="Total gas limit provided by all transactions in the block" />
           {showMore && (
             <BlockHashHideOptions
               gasUsed={gasUsed}

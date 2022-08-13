@@ -11,6 +11,7 @@ class MyDocument extends Document {
             integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
             crossOrigin="anonymous"
           />
+           <link rel="stylesheet" src="https://unpkg.com/css-tooltip" />
         </Head>
 
         <body>

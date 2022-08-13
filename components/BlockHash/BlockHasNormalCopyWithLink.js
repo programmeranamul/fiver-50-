@@ -3,14 +3,21 @@ import { useTheme } from "../../lib/ThemeContext";
 import style from "../../styles/BlockHash.module.css";
 import Link from "next/link";
 import { copyText } from "./../../lib/CopyFunction";
+import MyToolTip from './../../lib/MyToolTip';
 
-function BlockHasNormalCopyWithLink({ title, value, link }) {
+function BlockHasNormalCopyWithLink({ title, value, link,tooltip }) {
   const { theme, setTheme, my } = useTheme();
   const lightTheme = theme === "Light";
   return (
     <tr>
       <th>
-        <Icon icon="ant-design:question-circle-outlined" /> <span>{title}</span>
+      <MyToolTip>
+          <Icon
+            icon="ant-design:question-circle-outlined"
+            content={tooltip}
+          />
+        </MyToolTip> 
+       <span>{title}</span>
       </th>
       <td>
         <Icon

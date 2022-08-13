@@ -325,3 +325,22 @@ tbody tr td:last-child {
     margin-bottom: 12px;
   }
 }
+
+
+
+.my-tool-tip{
+  position: relative;
+}
+.my-tool-tip::before{
+  /* content: arrt(data-tooltip);
+  color: #fff;
+  width: max-content;
+  max-width:100%;
+  background-color: #000;
+  position: absolute; */
+  content: "";
+  width: 100px;
+  height: 100px;
+  background-color: #000;
+  position: absolute;
+}

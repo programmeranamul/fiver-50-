@@ -3,10 +3,11 @@ import { useTheme } from "../../lib/ThemeContext";
 import style from "../../styles/BlockHash.module.css";
 import Link from "next/link";
 import { copyText } from "./../../lib/CopyFunction";
+import MyToolTip from "../../lib/MyToolTip";
 
-// ant-design:arrow-left-outlined
 
-function BlockHashTableHashCol({ value, title }) {
+
+function BlockHashTableHashCol({ value, title, tooltip }) {
   const { theme, setTheme, my } = useTheme();
   const lightTheme = theme === "Light";
   return (
@@ -16,7 +17,13 @@ function BlockHashTableHashCol({ value, title }) {
       } ${lightTheme ? style.has_col_l : style.has_col_d}`}
     >
       <th>
-        <Icon icon="ant-design:question-circle-outlined" /> <span>{title}</span>
+        <MyToolTip>
+          <Icon
+            icon="ant-design:question-circle-outlined"
+            content={tooltip}
+          />
+        </MyToolTip>       
+        <span>{title}</span>
       </th>
       <td>
         <span>
@@ -31,7 +38,7 @@ function BlockHashTableHashCol({ value, title }) {
               <Icon icon="ant-design:arrow-left-outlined" />
             </a>
           </Link>
-          <Link href={`/block/${value - 1}`}>
+          <Link href={`/block/${Number(value) + 1}`}>
             <a>
               <Icon icon="ant-design:arrow-right-outlined" />
             </a>
