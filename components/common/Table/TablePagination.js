@@ -40,6 +40,14 @@ function TablePagination() {
           className={theme === "Light" ? style.icon_l : style.icon_d}
         />
       </div>
+      <div
+        className={`${theme === "Light" ? style.single_l : style.single_d} ${
+          style.single
+        }`}
+      >
+        Last
+      </div>
+     
     </div>
   );
 }

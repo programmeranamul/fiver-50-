@@ -3,16 +3,23 @@ import { Icon } from "@iconify/react";
 import { useTheme } from "../../lib/ThemeContext";
 import Link from "next/link";
 import { copyText } from "./../../lib/CopyFunction";
+import MyToolTip from "./../../lib/MyToolTip";
 
-function TxToken() {
+function TxToken({ tooltip }) {
   const { theme, setTheme, my } = useTheme();
   const lightTheme = theme === "Light";
   const hash = "one1na9tmcxrn2t4x6jkhmz4ngch62tpzvv004294u";
   return (
     <tr className={`${style.tr} ${lightTheme ? style.tr_l : style.tr_d}`}>
       <th className="d-flex align-items-center ">
-        <Icon icon="ant-design:question-circle-outlined" className="me-1" />{" "}
-        Status
+        <MyToolTip>
+          <Icon
+            icon="ant-design:question-circle-outlined"
+            content={tooltip}
+            className="me-1"
+          />
+        </MyToolTip>
+        Token Transfers
       </th>
       <td className="d-flex flex-column">
         <div className="my-1">

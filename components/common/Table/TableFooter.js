@@ -10,7 +10,7 @@ function TableFooter({ dataPerRow, setDataPerRow }) {
       <div className={style.left}>
         <RecordsPerPage dataPerRow={dataPerRow} setDataPerRow={setDataPerRow} />
       </div>
-      <TablePagination />
+      <TablePagination/>
     </div>
   );
 }

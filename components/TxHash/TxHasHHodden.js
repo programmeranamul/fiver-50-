@@ -1,12 +1,14 @@
 import React from "react";
 import TxNormalCol from "./TxNormalCol";
+import TxCopyAndLinkCol from './TxCopyAndLinkCol';
 
-function TxHasHHodden({ r, s, v }) {
+function TxHasHHodden({ r, s, v ,gasLimit}) {
   return (
     <>
-      <TxNormalCol title="r" value={r} />
-      <TxNormalCol title="s" value={s} />
-      <TxNormalCol title="v" value={v} />
+      <TxCopyAndLinkCol title="r" value={r} tooltip="Value fro the transaction's signature"/>
+      <TxCopyAndLinkCol title="s" value={s}  tooltip="Value fro the transaction's signature"/>
+      <TxCopyAndLinkCol title="v" value={v}  tooltip="Value fro the transaction's signature"/>
+      <TxCopyAndLinkCol title="gasLimit" value={gasLimit}  tooltip="Total gas limit provided by all transactions in the block"/>
     </>
   );
 }

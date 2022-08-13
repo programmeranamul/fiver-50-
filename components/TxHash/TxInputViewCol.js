@@ -3,8 +3,9 @@ import { Icon } from "@iconify/react";
 import { useTheme } from "../../lib/ThemeContext";
 import Link from "next/link";
 import { copyText } from "./../../lib/CopyFunction";
+import MyToolTip from './../../lib/MyToolTip';
 
-function TxInputViewCol() {
+function TxInputViewCol({tooltip}) {
   const { theme, setTheme, my } = useTheme();
   const lightTheme = theme === "Light";
 
@@ -14,7 +15,13 @@ function TxInputViewCol() {
   return (
     <tr className={`${style.tr} ${lightTheme ? style.tr_l : style.tr_d}`}>
       <th>
-        <Icon icon="ant-design:question-circle-outlined" /> Input
+      <MyToolTip>
+          <Icon
+            icon="ant-design:question-circle-outlined"
+            content={tooltip}
+            className="me-1"
+          />
+        </MyToolTip> Input
       </th>
       <td className="d-flex align-items-center">
         <span>

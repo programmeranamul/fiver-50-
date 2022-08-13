@@ -10,10 +10,10 @@ function TxHashTab({ activeTab, setActiveTab, lists }) {
     <div className={style.wrapper}>
       {lists.map((list, index) => (
         <div
-          onClick={() => setActiveTab(index)}
+          onClick={() => setActiveTab(list)}
           key={index}
           className={`${
-            index === activeTab ? style.tab_active : style.tab_inactive
+            list === activeTab ? style.tab_active : style.tab_inactive
           } ${style.tab} ${lightTheme ? style.tab_l : style.tab_d}`}
         >
           <p className="mb-0">{list}</p>

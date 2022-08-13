@@ -9,12 +9,15 @@ import AddressNftTransfare from "./AddressNftTransfare";
 import { AddressTransactionsTableColData } from "../../data/AddressTransactionsTabledata";
 import { AddressTransactionsTableRowData } from "./../../data/AddressTransactionsTabledata";
 import AddressHrc20 from "./AddressHrc20";
+import AddressHolders from './AddressHolders';
+import AddressContract from './AddressContract';
+import AddressTool from './AddressTool';
 
 function AddressDataSection() {
   const { theme, setTheme, my } = useTheme();
   const lightTheme = theme === "Light";
 
-  const [activeTab, setActiveTab] = useState(0);
+  const [activeTab, setActiveTab] = useState('Transactions');
 
   const tablists = [
     "Transactions",
@@ -22,6 +25,7 @@ function AddressDataSection() {
     "Internal",
     "HRC20 Transfers",
     "NFT Transfers",
+    "Holders",
   ];
 
   return (
@@ -36,11 +40,14 @@ function AddressDataSection() {
           setActiveTab={setActiveTab}
           lists={tablists}
         />
-        {activeTab == 0 && <AddressTransactions />}
-        {activeTab == 1 && <AddressStacking />}
-        {activeTab == 2 && <AddressInternal />}
-        {activeTab == 3 && <AddressHrc20 />}
-        {activeTab == 4 && <AddressNftTransfare />}
+        {/* {activeTab == "Transactions" && <AddressTransactions />} */}
+        {/* {activeTab == "Staking" && <AddressStacking />}
+        {activeTab == "Internal" && <AddressInternal />}
+        {activeTab == "HRC20 Transfers" && <AddressHrc20 />}
+        {activeTab == "NFT Transfers" && <AddressNftTransfare />} */}
+        {/* <AddressHolders /> */}
+        {/* <AddressContract /> */}
+        <AddressTool />
       </div>
     </article>
   );

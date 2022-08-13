@@ -3,14 +3,20 @@ import { Icon } from "@iconify/react";
 import { useTheme } from "../../lib/ThemeContext";
 import Link from "next/link";
 import { copyText } from "./../../lib/CopyFunction";
+import MyToolTip from './../../lib/MyToolTip';
 
-function TxCopyAndLinkCol({ link, value, title }) {
+function TxCopyAndLinkCol({ link, value, title,tooltip }) {
   const { theme, setTheme, my } = useTheme();
   const lightTheme = theme === "Light";
   return (
     <tr className={`${style.tr} ${lightTheme ? style.tr_l : style.tr_d}`}>
       <th>
-        <Icon icon="ant-design:question-circle-outlined" /> {title}
+      <MyToolTip>
+          <Icon
+            icon="ant-design:question-circle-outlined"
+            content={tooltip}
+          />
+        </MyToolTip>{" "} {title}
       </th>
       <td className="d-flex align-items-center">
         <span>
