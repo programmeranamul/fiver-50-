@@ -12,8 +12,10 @@ function MyApp({ Component, pageProps }) {
   return (
     <ThemeProvider>
       <Header />
+      <div className="main-body">
       <Search className="container" />
       <Component {...pageProps} />
+      </div>
       <Footer />
     </ThemeProvider>
   );

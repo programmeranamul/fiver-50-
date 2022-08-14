@@ -4,6 +4,7 @@
 .table_warpper table {
   min-width: 1110px;
   border-collapse: collapse;
+  width: 100%;
 }
 .table_warpper table thead th {
   padding: 16px 8px;

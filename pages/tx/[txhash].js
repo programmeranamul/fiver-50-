@@ -10,7 +10,7 @@ function TxHash() {
   const { theme, setTheme, my } = useTheme();
   const lightTheme = theme === "Light";
 
-  const [activeTab, setActiveTab] = useState(0);
+  const [activeTab, setActiveTab] = useState("Transaction Details");
 
   const tablists = [
     "Transaction Details",

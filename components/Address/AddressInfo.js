@@ -37,7 +37,7 @@ function AddressInfo() {
           value={transactionHash}
           link={`/tx/${transactionHash}`}
         />
-         <AddressBlanceCol title="Banlce" value={balance} />
+         <AddressBlanceCol title="Balance" value={balance} />
         <AddressNormalCol title="Staked" value={staked} />
         <AddressNormalCol title="Name" value={name} />
         <AddressNormalCol title="Symbol" value={symbol} />

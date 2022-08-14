@@ -342,3 +342,7 @@ tbody tr td:last-child {
 .tp_i_d{
   color:#fff
 }
+
+.main-body{
+  min-height: 90vh;
+}
