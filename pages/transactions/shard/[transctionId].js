@@ -42,7 +42,7 @@ function TransctionId() {
         <div
           className={`${lightTheme ? style.wrapper_l : style.wrapper_d} ${
             style.wrapper
-          }`}
+          } mt-3`}
         >
           <TransctionPageTableHeader dataPerRow={dataPerRow} />
           <TransctionPageTable datas={datas} />

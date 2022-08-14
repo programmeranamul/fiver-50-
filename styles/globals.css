@@ -312,17 +312,7 @@ tbody tr td:last-child {
   color: #fff !important;
 }
 
-/* media query */
-@media (max-width: 767.98px) {
-  .data-table {
-    overflow-x: scroll;
-  }
-  .title-1 {
-    font-size: 26px;
-    line-height: 32px;
-    margin-bottom: 12px;
-  }
-}
+
 
 .link_l {
   color: rgb(0, 174, 233);
@@ -345,4 +335,18 @@ tbody tr td:last-child {
 
 .main-body{
   min-height: 90vh;
+}
+
+
+
+/* media query */
+@media (max-width: 767.98px) {
+  .data-table {
+    overflow-x: scroll;
+  }
+  .title-1 {
+    font-size: 26px;
+    line-height: 32px;
+    margin-bottom: 12px;
+  }
 }
