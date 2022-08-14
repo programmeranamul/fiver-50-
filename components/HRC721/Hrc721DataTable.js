@@ -4,6 +4,7 @@ import style from "../../styles/HrcDataTable.module.css";
 import { Hrc721DataTableRow } from "./../../data/Hrc721DataTableData";
 import Link from "next/link";
 import { copyText } from "./../../lib/CopyFunction";
+import MyTippy from './../common/MyTippy';
 
 function Hrc721DataTable({ data }) {
   const { theme, setTheme, my } = useTheme();
@@ -77,7 +78,9 @@ function Hrc721DataTable({ data }) {
                 <div className={`justify-content-end ${style.icon_text}`}>
                   <span>{el.holders}</span>
                   <span className="d-flex">
-                    <Icon icon="ant-design:question-circle-outlined" />
+                  <MyTippy content={"Last update block height: 30, 013,427"}>
+                      <Icon icon="ant-design:question-circle-outlined" className={theme === "Light" ? "tp_i_l" : "tp_i_d"} />
+                    </MyTippy>
                   </span>
                 </div>
               </td>

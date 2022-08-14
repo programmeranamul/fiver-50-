@@ -330,3 +330,15 @@ tbody tr td:last-child {
 .link_d {
   color: rgb(105, 250, 189);
 }
+.tp-btn{
+  background: none;
+    border: none;
+    padding: 0;
+}
+.tp_i_l{
+  color: rgb(85, 98, 109);
+}
+
+.tp_i_d{
+  color:#fff
+}

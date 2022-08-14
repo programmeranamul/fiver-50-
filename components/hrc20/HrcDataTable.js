@@ -5,6 +5,8 @@ import { useTheme } from "../../lib/ThemeContext";
 import Link from "next/link";
 import copy from "copy-text-to-clipboard";
 import { copyText } from "./../../lib/CopyFunction";
+import MyToolTip from "./../../lib/MyToolTip";
+import MyTippy from "./../common/MyTippy";
 
 function HrcDataTable({ data }) {
   const { theme, setTheme, my } = useTheme();
@@ -84,7 +86,10 @@ function HrcDataTable({ data }) {
                     <b>{el.circulatingSupply}</b>
                   </span>
                   <span className="d-flex">
-                    <Icon icon="ant-design:question-circle-outlined" />
+                    
+                    <MyTippy content={"Last update block height: 30, 013,427"}>
+                      <Icon icon="ant-design:question-circle-outlined" className={theme === "Light" ? "tp_i_l" : "tp_i_d"} />
+                    </MyTippy>
                   </span>
                 </div>
               </td>
@@ -98,7 +103,9 @@ function HrcDataTable({ data }) {
                     <b>{el.totalSupply}</b>
                   </span>
                   <span className="d-flex">
-                    <Icon icon="ant-design:question-circle-outlined" />
+                  <MyTippy content={"Last update block height: 30, 013,427"}>
+                      <Icon icon="ant-design:question-circle-outlined" className={theme === "Light" ? "tp_i_l" : "tp_i_d"} />
+                    </MyTippy>
                   </span>
                 </div>
               </td>
@@ -110,7 +117,9 @@ function HrcDataTable({ data }) {
                 <div className={style.icon_text}>
                   <span>{el.holders}</span>
                   <span className="d-flex">
-                    <Icon icon="ant-design:question-circle-outlined" />
+                  <MyTippy content={"Last update block height: 30, 013,427"}>
+                      <Icon icon="ant-design:question-circle-outlined" className={theme === "Light" ? "tp_i_l" : "tp_i_d"} />
+                    </MyTippy>
                   </span>
                 </div>
               </td>
